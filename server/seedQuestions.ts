@@ -1,0 +1,3143 @@
+import { Question, TopicConfig } from '../src/types';
+
+export const TOPICS: TopicConfig[] = [
+  {
+    id: 'chud_1',
+    title: 'Chủ đề 1: Chất',
+    shortTitle: 'Chủ đề 1',
+    description: 'Sự biến đổi trạng thái của chất, hỗn hợp và dung dịch, sự biến đổi hóa học, tính chất vật liệu.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_1'],
+    order: 1
+  },
+  {
+    id: 'chud_2',
+    title: 'Chủ đề 2: Năng lượng',
+    shortTitle: 'Chủ đề 2',
+    description: 'Năng lượng Mặt Trời, gió, nước chảy, chất đốt, điện năng; sử dụng an toàn và tiết kiệm năng lượng.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_2'],
+    order: 2
+  },
+  {
+    id: 'on_tap_gk1',
+    title: 'Ôn tập giữa kì 1',
+    shortTitle: 'Giữa kì 1',
+    description: 'Nội dung tích hợp trọng tâm 2 chủ đề: Chất và Năng lượng.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_1', 'chud_2'],
+    order: 3
+  },
+  {
+    id: 'chud_3',
+    title: 'Chủ đề 3: Thực vật và động vật',
+    shortTitle: 'Chủ đề 3',
+    description: 'Sự sinh sản và phát triển của thực vật có hoa; các hình thức sinh sản, vòng đời của động vật.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_3'],
+    order: 4
+  },
+  {
+    id: 'on_tap_ck1',
+    title: 'Ôn tập cuối kì 1',
+    shortTitle: 'Cuối kì 1',
+    description: 'Tổng hợp kiến thức học kì 1: Chất, Năng lượng, Thực vật và động vật.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_1', 'chud_2', 'chud_3'],
+    order: 5
+  },
+  {
+    id: 'chud_4',
+    title: 'Chủ đề 4: Vi khuẩn',
+    shortTitle: 'Chủ đề 4',
+    description: 'Đặc điểm vi khuẩn, vi khuẩn có ích (lên men thực phẩm), vi khuẩn có hại và các biện pháp phòng ngừa.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_4'],
+    order: 6
+  },
+  {
+    id: 'chud_5',
+    title: 'Chủ đề 5: Con người và Sức khỏe',
+    shortTitle: 'Chủ đề 5',
+    description: 'Sự sinh sản ở người, giai đoạn dậy thì, phòng tránh bệnh truyền nhiễm (sốt xuất huyết, sốt rét...), phòng tránh xâm hại.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_5'],
+    order: 7
+  },
+  {
+    id: 'on_tap_gk2',
+    title: 'Ôn tập giữa kì 2',
+    shortTitle: 'Giữa kì 2',
+    description: 'Tổng hợp kiến thức trọng tâm: Vi khuẩn, Con người và Sức khỏe.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_4', 'chud_5'],
+    order: 8
+  },
+  {
+    id: 'chud_6',
+    title: 'Chủ đề 6: Sinh vật và môi trường',
+    shortTitle: 'Chủ đề 6',
+    description: 'Môi trường sống, tài nguyên thiên nhiên, chuỗi thức ăn, vai trò môi trường và các hoạt động bảo vệ.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_6'],
+    order: 9
+  },
+  {
+    id: 'on_tap_ck2',
+    title: 'Ôn tập cuối kì 2',
+    shortTitle: 'Cuối kì 2',
+    description: 'Tổng kết kiến thức học kì 2: Vi khuẩn, Con người và Sức khỏe, Sinh vật và môi trường.',
+    questionCount: 30,
+    durationMinutes: 30,
+    sourceTopics: ['chud_4', 'chud_5', 'chud_6'],
+    order: 10
+  },
+  {
+    id: 'on_tap_cn',
+    title: 'Ôn tập cuối năm',
+    shortTitle: 'Cuối năm',
+    description: 'Đề kiểm tra tổng hợp toàn diện cả 6 chủ đề Khoa học lớp 5 theo chương trình GDPT.',
+    questionCount: 70,
+    durationMinutes: 30,
+    sourceTopics: ['chud_1', 'chud_2', 'chud_3', 'chud_4', 'chud_5', 'chud_6'],
+    order: 11
+  }
+];
+
+export const INITIAL_QUESTIONS: Question[] = [
+  // ================= CHỦ ĐỀ 1: CHẤT =================
+  // Nhận biết
+  {
+    id: 'c1_nb_01',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hiện tượng nước từ thể lỏng chuyển sang thể khí (hơi) ở nhiệt độ bất kì gọi là gì?',
+    options: ['Sự bay hơi', 'Sự ngưng tụ', 'Sự đông đặc'],
+    correctOptionIndex: 0,
+    explanation: 'Sự bay hơi là quá trình chuyển từ thể lỏng sang thể khí diễn ra ở mặt thoáng của chất lỏng.',
+    source: 'SGK Khoa học 5, tr. 10',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_02',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nước đá khi tan ra thành nước lỏng xảy ra quá trình biến đổi nào?',
+    options: ['Sự nóng chảy', 'Sự ngưng tụ', 'Sự bay hơi'],
+    correctOptionIndex: 0,
+    explanation: 'Sự nóng chảy là hiện tượng chuyển từ thể rắn sang thể lỏng khi gặp nhiệt độ cao hơn.',
+    source: 'SGK Khoa học 5, tr. 11',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_03',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Hỗn hợp và dung dịch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Dung dịch là gì?',
+    options: [
+      'Hỗn hợp chất lỏng với chất rắn bị hòa tan và phân bố đều',
+      'Hỗn hợp các chất không hòa tan vào nhau',
+      'Hỗn hợp nước và cát khuấy đều'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Dung dịch là hỗn hợp đồng nhất giữa chất tan và dung môi.',
+    source: 'SGK Khoa học 5, tr. 15',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_04',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hiện tượng nào sau đây là sự biến đổi hóa học?',
+    options: [
+      'Đinh sắt để ngoài không khí ẩm bị gỉ sét',
+      'Nước lỏng đông thành đá trong tủ lạnh',
+      'Xé một tờ giấy trắng làm đôi'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Đinh sắt bị gỉ sét tạo ra chất mới (oxit sắt), do đó là sự biến đổi hóa học.',
+    source: 'SGK Khoa học 5, tr. 20',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_05',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nhiệt độ sôi của nước tinh khiết ở áp suất chuẩn là bao nhiêu độ C?',
+    options: ['100°C', '80°C', '50°C'],
+    correctOptionIndex: 0,
+    explanation: 'Nước tinh khiết sôi ở 100°C tại áp suất khí quyển tiêu chuẩn.',
+    source: 'SGK Khoa học 5, tr. 12',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_06',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Hỗn hợp và dung dịch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Chất nào sau đây không tan trong nước?',
+    options: ['Cát mịn', 'Đường ăn', 'Muối ăn'],
+    correctOptionIndex: 0,
+    explanation: 'Cát là chất không tan trong nước, tạo thành hỗn hợp không đồng nhất.',
+    source: 'SGK Khoa học 5, tr. 16',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_07',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hiện tượng hơi nước bốc lên gặp lạnh tạo thành những giọt sương gọi là gì?',
+    options: ['Sự ngưng tụ', 'Sự bay hơi', 'Sự đông đặc'],
+    correctOptionIndex: 0,
+    explanation: 'Hơi nước gặp lạnh chuyển từ thể khí sang thể lỏng là sự ngưng tụ.',
+    source: 'SGK Khoa học 5, tr. 13',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_08',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Dấu hiệu rõ nhất cho thấy có sự biến đổi hóa học xảy ra là gì?',
+    options: [
+      'Có chất mới xuất hiện với tính chất khác biệt',
+      'Chất chỉ đổi hình dạng bên ngoài',
+      'Chất chỉ chuyển từ thể lỏng sang thể rắn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Biến đổi hóa học luôn kèm theo sự tạo thành chất mới.',
+    source: 'SGK Khoa học 5, tr. 22',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_09',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Hỗn hợp và dung dịch',
+    type: 'matching',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nối các hỗn hợp ở cột trái với dạng tương ứng ở cột phải:',
+    matchingPairs: [
+      { id: 'm1', left: 'Nước chanh đường', right: 'Dung dịch' },
+      { id: 'm2', left: 'Gạo lẫn trấu', right: 'Hỗn hợp chất rắn' },
+      { id: 'm3', left: 'Dầu ăn lẫn trong nước', right: 'Hỗn hợp không đồng nhất' }
+    ],
+    explanation: 'Nước chanh đường tạo dung dịch đồng nhất, gạo lẫn trấu là hỗn hợp rắn, dầu và nước tách lớp.',
+    source: 'SGK Khoa học 5, tr. 18',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_10',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi của chất',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Chọn từ thích hợp điền vào chỗ trống về các thể của nước:',
+    blankTemplate: 'Nước tồn tại ở ba thể: thể {1}, thể {2} và thể {3}.',
+    blankOptions: ['rắn', 'lỏng', 'khí', 'nhiệt', 'đá'],
+    blankAnswers: ['rắn', 'lỏng', 'khí'],
+    explanation: 'Nước tồn tại ở 3 thể cơ bản: rắn (băng), lỏng (nước), khí (hơi nước).',
+    source: 'SGK Khoa học 5, tr. 9',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_11',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Quá trình nước lỏng chuyển thành nước đá được gọi là gì?',
+    options: ['Sự đông đặc', 'Sự nóng chảy', 'Sự ngưng tụ'],
+    correctOptionIndex: 0,
+    explanation: 'Khi nhiệt độ giảm xuống dưới 0°C, nước lỏng hóa rắn gọi là đông đặc.',
+    source: 'SGK Khoa học 5, tr. 11',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_12',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hành động đốt que diêm tạo thành tro than và khói là biến đổi gì?',
+    options: ['Biến đổi hóa học', 'Biến đổi trạng thái', 'Biến đổi vật lí đơn thuần'],
+    correctOptionIndex: 0,
+    explanation: 'Quá trình cháy tạo ra tro than và các chất khí mới nên là biến đổi hóa học.',
+    source: 'SGK Khoa học 5, tr. 23',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_13',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Tách chất ra khỏi hỗn hợp',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Phương pháp nào dùng để tách các hạt cát không tan ra khỏi nước?',
+    options: ['Lọc bằng phễu và giấy lọc', 'Đun sôi cho bay hơi hết', 'Thêm muối ăn vào khuấy'],
+    correctOptionIndex: 0,
+    explanation: 'Phương pháp lọc cho phép giữ lại chất rắn không tan trên giấy lọc.',
+    source: 'SGK Khoa học 5, tr. 19',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_14',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vòng tuần hoàn của nước trong tự nhiên bao gồm các quá trình chính nào?',
+    options: [
+      'Bay hơi, ngưng tụ và tạo mưa',
+      'Đông đặc và kết tinh',
+      'Biến đổi hóa học và oxi hóa'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nước bốc hơi từ ao hồ biển, ngưng tụ thành mây rồi rơi xuống thành mưa.',
+    source: 'SGK Khoa học 5, tr. 14',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_nb_15',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Hỗn hợp và dung dịch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Khi hòa tan muối vào nước, nước đóng vai trò là gì?',
+    options: ['Dung môi', 'Chất tan', 'Hỗn hợp rắn'],
+    correctOptionIndex: 0,
+    explanation: 'Nước có khả năng hòa tan muối nên gọi là dung môi, muối là chất tan.',
+    source: 'SGK Khoa học 5, tr. 16',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Kết nối
+  {
+    id: 'c1_kn_01',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao khi phơi quần áo ướt dưới trời nắng to và có gió thì quần áo nhanh khô hơn?',
+    options: [
+      'Nhiệt độ cao và gió làm tăng tốc độ bay hơi của nước',
+      'Nắng và gió làm nước đông đặc lại',
+      'Gió làm biến đổi hóa học các sợi vải'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tốc độ bay hơi phụ thuộc vào nhiệt độ, gió và diện tích mặt thoáng.',
+    source: 'SGK Khoa học 5, tr. 12',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_02',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Tách chất ra khỏi hỗn hợp',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Hãy sắp xếp các bước để thu được muối tinh khiết từ nước biển:',
+    orderingItems: [
+      'Dẫn nước biển vào các ô ruộng muối',
+      'Phơi nắng để nước trong nước biển bay hơi dần',
+      'Thu gom các hạt muối kết tinh trên mặt ruộng'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Nước biển được dẫn vào ruộng, nắng làm nước bay hơi, muối kết tinh và được cào thu gom.',
+    source: 'SGK Khoa học 5, tr. 19',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_03',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khi cho nước cốt chanh vào cốc sữa đậu nành, hiện tượng kết tủa vón cục xảy ra là do:',
+    options: [
+      'Axit trong chanh tác dụng làm biến tính protein trong đậu nành',
+      'Nước chanh làm sữa đậu nành đông đặc vì quá lạnh',
+      'Sữa đậu nành tự bốc hơi nước nhanh chóng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Đây là phản ứng biến đổi tính chất do axit trong chanh kết tủa chất đạm trong sữa.',
+    source: 'SGV Khoa học 5, tr. 25',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_04',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Vào buổi sáng sớm mùa đông, trên lá cây có những giọt sương đọng lại là do:',
+    options: [
+      'Hơi nước trong không khí gặp lạnh ngưng tụ thành nước lỏng',
+      'Cây tự tiết ra nước đá từ bên trong thân',
+      'Mưa phùn rơi liên tục cả đêm'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nhiệt độ ban đêm hạ thấp khiến hơi nước trong không khí ngưng tụ thành sương.',
+    source: 'SGK Khoa học 5, tr. 13',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_05',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Hỗn hợp và dung dịch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Để hòa tan đường vào nước nhanh hơn, ta nên áp dụng biện pháp nào sau đây?',
+    options: [
+      'Dùng nước ấm, khuấy đều và dùng đường hạt nhỏ',
+      'Dùng nước đá lạnh và để yên',
+      'Cho đường viên to vào nước đá'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nhiệt độ cao, khuấy và diện tích tiếp xúc lớn giúp các phân tử đường hòa tan nhanh hơn.',
+    source: 'SGK Khoa học 5, tr. 17',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_06',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'matching',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nối hiện tượng ở cột bên trái với phân loại biến đổi phù hợp:',
+    matchingPairs: [
+      { id: 'mk1', left: 'Ủ men nấu rượu gạo', right: 'Biến đổi hóa học' },
+      { id: 'mk2', left: 'Kéo sợi dây cao su dãn dài', right: 'Biến đổi cơ học' },
+      { id: 'mk3', left: 'Thỏi sáp nến chảy mềm khi hơ nóng', right: 'Biến đổi trạng thái (vật lí)' }
+    ],
+    explanation: 'Lên men tạo cồn là hóa học; dãn dây là cơ học; nến chảy mềm là biến đổi trạng thái.',
+    source: 'SGK Khoa học 5, tr. 24',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_07',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Tách chất ra khỏi hỗn hợp',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Muốn tách mùn cưa và sắt vụn bị trộn lẫn vào nhau, em dùng cách nào nhanh và hiệu quả nhất?',
+    options: [
+      'Dùng nam châm để hút các mẩu sắt ra',
+      'Đổ nước vào để sắt nổi lên trên',
+      'Dùng quạt thổi mạnh cho sắt bay đi'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Sắt có từ tính bị nam châm hút, mùn cưa không bị hút nên dễ dàng tách được.',
+    source: 'SGK Khoa học 5, tr. 19',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_08',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Nước và sự biến đổi',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khi đun nước trong ấm có nắp đậy, tại sao mặt trong của nắp ấm lại có nhiều giọt nước bám vào?',
+    options: [
+      'Hơi nước sôi bốc lên gặp nắp ấm lạnh hơn nên ngưng tụ lại',
+      'Nước sôi bắn tung tóe dính lên nắp ấm',
+      'Nắp ấm tự sinh ra nước lỏng khi nóng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Hơi nước nóng bay lên tiếp xúc với mặt nắp có nhiệt độ thấp hơn nên ngưng tụ thành giọt.',
+    source: 'SGK Khoa học 5, tr. 13',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_kn_09',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'ket_noi',
+    content: 'Điền từ thích hợp vào chỗ trống:',
+    blankTemplate: 'Trong sự biến đổi hóa học, chất ban đầu đã bị biến đổi thành {1} có {2} hoàn toàn khác.',
+    blankOptions: ['chất mới', 'tính chất', 'thể lỏng', 'hình dạng cũ'],
+    blankAnswers: ['chất mới', 'tính chất'],
+    explanation: 'Biến đổi hóa học tạo chất mới mang tính chất hóa học và vật lí khác với chất ban đầu.',
+    source: 'SGK Khoa học 5, tr. 21',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Vận dụng
+  {
+    id: 'c1_vd_01',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Phòng chống gỉ sét kim loại',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Để ngăn ngừa cánh cửa sắt ở trường học không bị hoen gỉ dưới tác động của mưa nắng, bác bảo vệ nên làm gì?',
+    options: [
+      'Sơn một lớp sơn chống gỉ bảo vệ lên bề mặt sắt',
+      'Thường xuyên xịt nước sạch lên cửa sắt',
+      'Dùng giấy nhám chà xát mỗi ngày'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Lớp sơn giúp cách ly sắt với khí oxi và hơi ẩm trong không khí, chống gỉ hiệu quả.',
+    source: 'SGV Khoa học 5, tr. 26',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_vd_02',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự biến đổi trạng thái của chất',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Tại sao khi cất chai nước thủy tinh chứa đầy nước vào ngăn đá tủ lạnh, chai có thể bị nứt vỡ?',
+    options: [
+      'Nước khi đông đặc thành đá có thể tích tăng lên làm vỡ chai',
+      'Nhiệt độ lạnh làm thủy tinh tự co lại quá mức',
+      'Chai bị áp suất không khí nén vỡ vụn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nước có đặc tính dãn nở thể tích khác thường khi chuyển từ thể lỏng sang đá đông đặc.',
+    source: 'SGK Khoa học 5, tr. 14',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_vd_03',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Tách chất trong thực tế',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Trong chuyến dã ngoại, nếu vô tình làm lẫn hạt đậu xanh và bột gạo mịn, em dùng dụng cụ nào trong ba lô để tách nhanh nhất?',
+    options: [
+      'Dùng chiếc rây nhỏ hoặc khăn lưới để rây lấy đậu xanh',
+      'Dùng nam châm hút',
+      'Đổ ngập nước rồi khuấy đều'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Hạt đậu xanh có kích thước lớn hơn nhiều so với mắt rây/lưới, bột gạo mịn sẽ lọt qua.',
+    source: 'SGK Khoa học 5, tr. 19',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_vd_04',
+    topicId: 'chud_1',
+    lesson: 'Bài 2: Hỗn hợp và dung dịch',
+    type: 'ordering',
+    cognitiveLevel: 'van_dung',
+    content: 'Sắp xếp quy trình pha chế một ly nước chanh đường giải khát thơm ngon, an toàn:',
+    orderingItems: [
+      'Rót nước lọc vào cốc sạch và hòa tan đường trước',
+      'Vắt lấy nước cốt chanh bỏ hạt vào cốc nước đường và khuấy đều',
+      'Thêm vài viên đá sạch để thưởng thức'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Hòa tan đường trước khi vắt chanh và thêm đá giúp đường tan nhanh và không bị vón lạnh.',
+    source: 'SGK Khoa học 5, tr. 18',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_vd_05',
+    topicId: 'chud_1',
+    lesson: 'Bài 3: Sự biến đổi hóa học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Để bảo quản thức ăn thừa không bị ôi thiu (chua hỏng do biến đổi hóa học), cách xử lí nào là khoa học nhất?',
+    options: [
+      'Đun sôi lại, để nguội đậy kín rồi cất vào ngăn mát tủ lạnh',
+      'Để thức ăn ngoài trời nắng ấm',
+      'Thêm thật nhiều ớt cay vào thức ăn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Đun sôi tiêu diệt vi sinh vật gây hại, nhiệt độ thấp trong tủ lạnh làm chậm các phản ứng biến chất.',
+    source: 'SGK Khoa học 5, tr. 26',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c1_vd_06',
+    topicId: 'chud_1',
+    lesson: 'Bài 1: Sự bay hơi trong đời sống',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi lau sàn nhà lớp học, để sàn nhanh khô tránh trơn trượt cho học sinh, em nên làm gì?',
+    options: [
+      'Vắt kiệt nước cây lau nhà, mở toang cửa sổ và bật quạt trần',
+      'Đóng kín cửa phòng học để giữ nhiệt',
+      'Đổ thêm nhiều nước xà phòng trơn lên sàn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Lau ẩm vừa phải kết hợp thông gió và bật quạt làm tăng tối đa tốc độ bay hơi của nước.',
+    source: 'SGK Khoa học 5, tr. 13',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+
+  // ================= CHỦ ĐỀ 2: NĂNG LƯỢNG =================
+  // Nhận biết
+  {
+    id: 'c2_nb_01',
+    topicId: 'chud_2',
+    lesson: 'Bài 4: Năng lượng Mặt Trời',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Mặt Trời cung cấp năng lượng cho Trái Đất ở những dạng nào?',
+    options: ['Ánh sáng và nhiệt', 'Gió và sóng biển', 'Điện năng và cơ năng'],
+    correctOptionIndex: 0,
+    explanation: 'Mặt Trời chiếu sáng và tỏa nhiệt sưởi ấm toàn bộ Trái Đất.',
+    source: 'SGK Khoa học 5, tr. 30',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_02',
+    topicId: 'chud_2',
+    lesson: 'Bài 5: Năng lượng gió và nước chảy',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Con người sử dụng năng lượng gió để làm gì?',
+    options: ['Làm quay cánh quạt tuabin phát điện', 'Làm đông lạnh thực phẩm', 'Tạo ra than đá'],
+    correctOptionIndex: 0,
+    explanation: 'Gió thổi làm quay tuabin gió để sản xuất ra điện năng sạch.',
+    source: 'SGK Khoa học 5, tr. 34',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_03',
+    topicId: 'chud_2',
+    lesson: 'Bài 6: Năng lượng chất đốt',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Chất đốt nào sau đây ở thể khí?',
+    options: ['Khí gas (khí tự nhiên)', 'Xăng dầu', 'Than đá'],
+    correctOptionIndex: 0,
+    explanation: 'Khí gas tự nhiên hoặc khí sinh học bioga là chất đốt ở thể khí.',
+    source: 'SGK Khoa học 5, tr. 38',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_04',
+    topicId: 'chud_2',
+    lesson: 'Bài 7: Sử dụng năng lượng điện',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Thiết bị nào sau đây biến đổi điện năng thành nhiệt năng để sử dụng?',
+    options: ['Bàn là (bàn ủi) điện', 'Quạt trần điện', 'Đài radio'],
+    correctOptionIndex: 0,
+    explanation: 'Bàn là điện sử dụng điện trở để tạo nhiệt là phẳng quần áo.',
+    source: 'SGK Khoa học 5, tr. 42',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_05',
+    topicId: 'chud_2',
+    lesson: 'Bài 7: Sử dụng năng lượng điện',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vật liệu nào sau đây dẫn điện tốt?',
+    options: ['Dây đồng', 'Đoạn gỗ khô', 'Ống nhựa dẻo'],
+    correctOptionIndex: 0,
+    explanation: 'Kim loại đồng là vật liệu dẫn điện rất tốt và phổ biến trong dây dẫn.',
+    source: 'SGK Khoa học 5, tr. 44',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_06',
+    topicId: 'chud_2',
+    lesson: 'Bài 5: Năng lượng nước chảy',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nhà máy thủy điện sử dụng năng lượng nào để phát điện?',
+    options: ['Năng lượng dòng nước chảy', 'Năng lượng ánh sáng Mặt Trời', 'Năng lượng than đá'],
+    correctOptionIndex: 0,
+    explanation: 'Dòng nước chảy từ trên cao làm quay tuabin máy phát điện trong nhà máy thủy điện.',
+    source: 'SGK Khoa học 5, tr. 35',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_07',
+    topicId: 'chud_2',
+    lesson: 'Bài 6: Năng lượng chất đốt',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Chất đốt nào sau đây có nguồn gốc từ hóa thạch?',
+    options: ['Than đá và dầu mỏ', 'Củi khô và rơm rạ', 'Bã mía'],
+    correctOptionIndex: 0,
+    explanation: 'Than đá, dầu mỏ và khí tự nhiên hình thành từ xác sinh vật qua hàng triệu năm hóa thạch.',
+    source: 'SGK Khoa học 5, tr. 39',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_08',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: An toàn và tiết kiệm điện',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hành động nào sau đây đảm bảo an toàn khi sử dụng điện?',
+    options: [
+      'Rút phích cắm bằng cách cầm vào phần nhựa cách điện',
+      'Dùng tay ướt cắm phích điện vào ổ cắm',
+      'Chơi thả diều gần đường dây điện cao thế'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Phần vỏ nhựa cách điện ngăn dòng điện truyền vào cơ thể người.',
+    source: 'SGK Khoa học 5, tr. 48',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_09',
+    topicId: 'chud_2',
+    lesson: 'Bài 7: Thiết bị điện gia đình',
+    type: 'matching',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nối thiết bị điện với dạng năng lượng hữu ích mà thiết bị chuyển hóa thành:',
+    matchingPairs: [
+      { id: 'me1', left: 'Bóng đèn LED', right: 'Quang năng (ánh sáng)' },
+      { id: 'me2', left: 'Máy bơm nước', right: 'Cơ năng (chuyển động)' },
+      { id: 'me3', left: 'Nồi cơm điện', right: 'Nhiệt năng (nhiệt độ)' }
+    ],
+    explanation: 'Bóng đèn phát sáng, máy bơm tạo chuyển động cơ học, nồi cơm sinh nhiệt nấu chín.',
+    source: 'SGK Khoa học 5, tr. 43',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_10',
+    topicId: 'chud_2',
+    lesson: 'Bài 4: Năng lượng Mặt Trời',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Chọn từ thích hợp điền vào chỗ trống:',
+    blankTemplate: 'Cây xanh sử dụng năng lượng {1} của Mặt Trời để thực hiện quá trình {2}.',
+    blankOptions: ['ánh sáng', 'quang hợp', 'nhiệt độ', 'đông đặc'],
+    blankAnswers: ['ánh sáng', 'quang hợp'],
+    explanation: 'Quang năng từ Mặt Trời là yếu tố thiết yếu cho quá trình quang hợp của thực vật.',
+    source: 'SGK Khoa học 5, tr. 31',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_11',
+    topicId: 'chud_2',
+    lesson: 'Bài 5: Năng lượng tái tạo',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nguồn năng lượng nào sau đây là nguồn năng lượng tái tạo (sạch, vô tận)?',
+    options: ['Năng lượng gió', 'Than đá', 'Dầu mỏ'],
+    correctOptionIndex: 0,
+    explanation: 'Năng lượng gió liên tục được tái sinh trong tự nhiên, không bị cạn kiệt.',
+    source: 'SGK Khoa học 5, tr. 36',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_12',
+    topicId: 'chud_2',
+    lesson: 'Bài 6: Sử dụng chất đốt an toàn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Khí độc nào thường sinh ra khi đốt than củi trong phòng kín thiếu oxy?',
+    options: ['Khí cacbon monoxit (CO)', 'Khí oxy (O2)', 'Khí nitơ (N2)'],
+    correctOptionIndex: 0,
+    explanation: 'Đốt than trong phòng kín sinh khí CO cực kì nguy hiểm gây ngạt thở tử vong.',
+    source: 'SGK Khoa học 5, tr. 40',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_13',
+    topicId: 'chud_2',
+    lesson: 'Bài 7: Nguồn điện',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Dụng cụ nào cung cấp dòng điện nhỏ, an toàn thường dùng trong đồ chơi trẻ em?',
+    options: ['Pin', 'Ổ cắm điện lưới 220V', 'Trạm biến áp'],
+    correctOptionIndex: 0,
+    explanation: 'Pin cung cấp điện áp thấp (1.5V - 9V) an toàn cho người và các thiết bị nhỏ.',
+    source: 'SGK Khoa học 5, tr. 43',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_14',
+    topicId: 'chud_2',
+    lesson: 'Bài 4: Năng lượng Mặt Trời',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Thiết bị nào chuyển đổi trực tiếp năng lượng ánh sáng Mặt Trời thành điện năng?',
+    options: ['Tấm pin mặt trời (pin quang điện)', 'Bình nước nóng năng lượng mặt trời', 'Gương cầu lõm'],
+    correctOptionIndex: 0,
+    explanation: 'Pin quang điện hấp thụ ánh sáng và tạo ra dòng điện một chiều.',
+    source: 'SGK Khoa học 5, tr. 32',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_nb_15',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: Tiết kiệm điện',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Loại bóng đèn nào tiết kiệm điện năng nhất hiện nay?',
+    options: ['Bóng đèn LED', 'Bóng đèn dây tóc sợi đốt', 'Bóng đèn halogen'],
+    correctOptionIndex: 0,
+    explanation: 'Đèn LED có hiệu suất phát quang cao, tiêu tốn ít điện năng và bền hơn nhiều.',
+    source: 'SGK Khoa học 5, tr. 49',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Kết nối
+  {
+    id: 'c2_kn_01',
+    topicId: 'chud_2',
+    lesson: 'Bài 6: Năng lượng chất đốt và môi trường',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Việc khai thác và sử dụng quá nhiều than đá, dầu mỏ gây hậu quả nghiêm trọng gì?',
+    options: [
+      'Gây ô nhiễm không khí và gia tăng hiệu ứng nhà kính làm Trái Đất nóng lên',
+      'Làm cho tài nguyên khoáng sản ngày càng tăng thêm',
+      'Làm nhiệt độ bề mặt Trái Đất mát hơn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Khí thải khi đốt nhiên liệu hóa thạch chứa nhiều CO2 gây hiệu ứng nhà kính và bụi mịn.',
+    source: 'SGK Khoa học 5, tr. 41',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_02',
+    topicId: 'chud_2',
+    lesson: 'Bài 5: Năng lượng nước chảy',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao các nhà máy thủy điện thường được xây dựng ở vùng đồi núi cao có sông lớn chảy xiết?',
+    options: [
+      'Vì độ chênh lệch độ cao lớn tạo ra dòng nước chảy rất mạnh với năng lượng lớn',
+      'Vì ở vùng núi không có người sinh sống',
+      'Vì nước ở vùng núi không bao giờ bị đóng băng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Dòng nước từ trên cao đổ xuống tạo thế năng và động năng lớn làm quay tuabin hiệu quả.',
+    source: 'SGK Khoa học 5, tr. 35',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_03',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: An toàn điện',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khi phát hiện có người bị điện giật tại nhà, thứ tự các bước xử lí đúng là:',
+    orderingItems: [
+      'Ngắt ngay cầu dao điện hoặc aptomat tổng',
+      'Dùng vật cách điện khô (gậy gỗ, thanh tre) tách nạn nhân ra khỏi nguồn điện',
+      'Gọi cấp cứu 115 và tiến hành sơ cứu hô hấp nhân tạo nếu cần'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Trước hết phải ngắt nguồn điện để đảm bảo an toàn cho người cứu, sau đó tách nạn nhân và cấp cứu.',
+    source: 'SGV Khoa học 5, tr. 50',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_04',
+    topicId: 'chud_2',
+    lesson: 'Bài 4: Năng lượng Mặt Trời',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Người nông dân ứng dụng năng lượng nhiệt và ánh sáng Mặt Trời vào việc nào sau đây?',
+    options: [
+      'Phơi lúa, ngô, làm muối và sấy khô nông hải sản',
+      'Bảo quản thịt cá trong phòng tối',
+      'Đúc tượng đồng và nấu chảy kim loại'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nắng ấm giúp bốc hơi nước nhanh, làm khô ngũ cốc và kết tinh muối biển.',
+    source: 'SGK Khoa học 5, tr. 31',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_05',
+    topicId: 'chud_2',
+    lesson: 'Bài 6: Khí sinh học bioga',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Xây hầm biogas (khí sinh học) từ chất thải chăn nuôi mang lại lợi ích kép gì?',
+    options: [
+      'Vừa tạo nguồn chất đốt sạch, vừa giảm ô nhiễm môi trường nông thôn',
+      'Vừa tạo ra xăng thơm, vừa làm mát chuồng trại',
+      'Vừa làm tăng mùi hôi thối, vừa tạo ra than bùn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Chất thải ủ kín sinh khí metan làm nhiên liệu đun nấu, bã thải làm phân bón hữu cơ sạch.',
+    source: 'SGK Khoa học 5, tr. 40',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_06',
+    topicId: 'chud_2',
+    lesson: 'Bài 7: Mạch điện thắp sáng',
+    type: 'matching',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nối bộ phận mạch điện với chức năng của nó:',
+    matchingPairs: [
+      { id: 'mck1', left: 'Công tắc điện', right: 'Đóng hoặc ngắt mạch điện' },
+      { id: 'mck2', left: 'Cầu chì', right: 'Tự ngắt mạch khi quá tải để phòng cháy' },
+      { id: 'mck3', left: 'Dây dẫn bọc nhựa', right: 'Dẫn điện an toàn từ nguồn tới thiết bị' }
+    ],
+    explanation: 'Công tắc điều khiển, cầu chì bảo vệ mạch khi chập tải, dây dẫn truyền tải điện.',
+    source: 'SGK Khoa học 5, tr. 45',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_07',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: Tiết kiệm năng lượng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao chúng ta phải sử dụng tiết kiệm năng lượng điện dù gia đình có đủ tiền chi trả?',
+    options: [
+      'Vì sản xuất điện tiêu tốn nhiều tài nguyên thiên nhiên và góp phần bảo vệ môi trường',
+      'Vì dòng điện càng dùng nhiều sẽ càng bị yếu đi vĩnh viễn',
+      'Vì các thiết bị điện sẽ biến mất nếu dùng nhiều'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nhiệt điện đốt than dầu sinh khí thải, tiết kiệm điện giảm áp lực lên tài nguyên và môi trường.',
+    source: 'SGK Khoa học 5, tr. 49',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_08',
+    topicId: 'chud_2',
+    lesson: 'Bài 5: Thuyền buồm và gió',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Để thuyền buồm di chuyển nhanh về phía trước, cánh buồm cần được điều chỉnh như thế nào?',
+    options: [
+      'Hứng trọn luồng gió thổi từ phía sau để nhận lực đẩy cơ học lớn nhất',
+      'Hạ buồm cuộn tròn lại',
+      'Chắn gió thổi từ phía trước'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cánh buồm hứng gió chuyển động năng của luồng khí thành lực đẩy thuyền chuyển động.',
+    source: 'SGK Khoa học 5, tr. 34',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_kn_09',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: Hành động tiết kiệm điện',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'ket_noi',
+    content: 'Hoàn thành khẩu hiệu tiết kiệm điện:',
+    blankTemplate: 'Hãy {1} các thiết bị điện khi không {2} để tiết kiệm chi phí và tài nguyên.',
+    blankOptions: ['tắt', 'sử dụng', 'bật', 'phá hỏng'],
+    blankAnswers: ['tắt', 'sử dụng'],
+    explanation: 'Tắt các thiết bị khi ra khỏi phòng là thói quen văn minh và cần thiết.',
+    source: 'SGK Khoa học 5, tr. 50',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Vận dụng
+  {
+    id: 'c2_vd_01',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: Sử dụng điều hòa tiết kiệm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Vào mùa hè nóng bức, em nên cài đặt nhiệt độ máy điều hòa phòng học ở mức nào để vừa mát mẻ vừa tiết kiệm điện?',
+    options: [
+      'Từ 26°C đến 28°C kết hợp bật quạt gió thoang thoảng',
+      'Bật 16°C và mở toang cửa sổ lớp học',
+      'Bật 18°C và không bao giờ tắt'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nhiệt độ 26-28°C cùng quạt nhẹ giúp làm mát đồng đều và giảm tiêu hao điện năng đáng kể.',
+    source: 'SGV Khoa học 5, tr. 51',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_vd_02',
+    topicId: 'chud_2',
+    lesson: 'Bài 6: An toàn sử dụng bếp gas',
+    type: 'ordering',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi ngửi thấy mùi khí gas nồng nặc trong nhà bếp, em cần thực hiện các thao tác nào theo thứ tự an toàn:',
+    orderingItems: [
+      'Không bật tắt bất kì công tắc điện hay đánh lửa nào',
+      'Khóa ngay van bình gas và mở tất cả các cửa sổ thông gió',
+      'Đi ra ngoài nơi thoáng khí và báo ngay cho người lớn hoặc cứu hỏa'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Tia lửa điện từ công tắc có thể kích nổ đám mây khí gas; cần khóa van, thông gió và thoát ra ngoài.',
+    source: 'SGK Khoa học 5, tr. 41',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_vd_03',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: An toàn khi có sấm sét',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Đang đi bộ trên cánh đồng vắng mà gặp trời mưa to kèm sấm sét dữ dội, hành động nào an toàn nhất cho em?',
+    options: [
+      'Không đứng dưới cây to, tránh xa cột kim loại, ngồi xổm gót chân chụm lại ở chỗ trũng',
+      'Chạy thật nhanh đến đứng trú mưa dưới gốc cây đa cổ thụ cao nhất',
+      'Giơ cao chiếc ô có khung sắt nhọn lên trời'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cây cao và kim loại dễ hút sét đánh; ngồi chụm gót ở nơi thấp giảm thiểu rủi ro sét đánh trực tiếp.',
+    source: 'SGK Khoa học 5, tr. 48',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_vd_04',
+    topicId: 'chud_2',
+    lesson: 'Bài 4: Tận dụng năng lượng tự nhiên',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi thiết kế xây dựng ngôi nhà thân thiện với môi trường, gia đình nên ưu tiên giải pháp nào?',
+    options: [
+      'Mở nhiều cửa đón ánh sáng tự nhiên và lắp hệ thống pin năng lượng mặt trời trên mái',
+      'Xây tường kín mít và bật đèn điện suốt cả ngày',
+      'Sử dụng toàn bộ bếp đun bằng than đá'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Đón ánh sáng tự nhiên và lắp điện mặt trời giúp cắt giảm tiền điện và thân thiện môi trường.',
+    source: 'SGK Khoa học 5, tr. 33',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_vd_05',
+    topicId: 'chud_2',
+    lesson: 'Bài 7: An toàn điện gia đình',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Bạn Nam thấy dây sạc điện thoại bị bong tróc lớp nhựa để lộ dây đồng bên trong. Nam nên làm gì?',
+    options: [
+      'Báo bố mẹ ngắt nguồn và thay dây sạc mới hoặc bọc băng dính cách điện chuyên dụng',
+      'Cứ cắm sạc bình thường và dùng ngón tay ấn chặt vào',
+      'Rửa dây sạc bằng nước sạch rồi cắm vào ổ'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Dây điện hở lõi đồng rất dễ gây rò rỉ điện giật chết người hoặc chập cháy nguy hiểm.',
+    source: 'SGK Khoa học 5, tr. 47',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c2_vd_06',
+    topicId: 'chud_2',
+    lesson: 'Bài 8: Tiết kiệm điện tại trường học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Sau buổi sinh hoạt lớp vào chiều thứ Sáu, việc làm nào của lớp trưởng thể hiện ý thức tiết kiệm và an toàn năng lượng?',
+    options: [
+      'Kiểm tra và tắt toàn bộ quạt, bóng điện, máy chiếu và rút phích cắm trước khi khóa cửa',
+      'Để nguyên quạt quay cho phòng học mát mẻ đến thứ Hai',
+      'Bật tất cả đèn hành lang để trang trí'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tắt hết thiết bị khi nghỉ cuối tuần chống lãng phí điện năng và loại trừ nguy cơ hỏa hoạn do chập điện.',
+    source: 'SGK Khoa học 5, tr. 50',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+
+  // ================= CHỦ ĐỀ 3: THỰC VẬT VÀ ĐỘNG VẬT =================
+  // Nhận biết
+  {
+    id: 'c3_nb_01',
+    topicId: 'chud_3',
+    lesson: 'Bài 9: Cơ quan sinh sản của thực vật có hoa',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Cơ quan sinh sản của thực vật có hoa là bộ phận nào?',
+    options: ['Hoa', 'Rễ', 'Thân'],
+    correctOptionIndex: 0,
+    explanation: 'Hoa là cơ quan sinh sản của các loài thực vật có hoa.',
+    source: 'SGK Khoa học 5, tr. 54',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_02',
+    topicId: 'chud_3',
+    lesson: 'Bài 9: Nhị và nhụy hoa',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Bộ phận sinh dục đực của hoa gọi là gì?',
+    options: ['Nhị', 'Nhụy', 'Cánh hoa'],
+    correctOptionIndex: 0,
+    explanation: 'Nhị là cơ quan sinh dục đực (chứa hạt phấn), nhụy là cơ quan sinh dục cái (chứa noãn).',
+    source: 'SGK Khoa học 5, tr. 55',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_03',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Sự sinh sản của thực vật có hoa',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hiện tượng hạt phấn rơi vào đầu nhụy được gọi là gì?',
+    options: ['Sự thụ phấn', 'Sự thụ tinh', 'Sự phát tán'],
+    correctOptionIndex: 0,
+    explanation: 'Sự thụ phấn là quá trình hạt phấn tiếp xúc với đầu nhụy.',
+    source: 'SGK Khoa học 5, tr. 58',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_04',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Sự sinh sản của động vật',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Loài động vật nào sau đây đẻ con và nuôi con bằng sữa mẹ?',
+    options: ['Mèo nhà', 'Chim bồ câu', 'Cá chép'],
+    correctOptionIndex: 0,
+    explanation: 'Mèo thuộc lớp thú (động vật có vú), đẻ con và nuôi con bằng sữa mẹ.',
+    source: 'SGK Khoa học 5, tr. 64',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_05',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Động vật đẻ trứng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Động vật nào sau đây sinh sản bằng hình thức đẻ trứng?',
+    options: ['Gà', 'Chó', 'Lợn (heo)'],
+    correctOptionIndex: 0,
+    explanation: 'Gà thuộc lớp chim, sinh sản bằng hình thức đẻ trứng.',
+    source: 'SGK Khoa học 5, tr. 63',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_06',
+    topicId: 'chud_3',
+    lesson: 'Bài 12: Vòng đời của côn trùng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vòng đời của bướm cải trải qua mấy giai đoạn?',
+    options: ['4 giai đoạn (Trứng - Sâu bướm - Nhộng - Bướm)', '2 giai đoạn', '6 giai đoạn'],
+    correctOptionIndex: 0,
+    explanation: 'Bướm cải biến thái hoàn toàn qua 4 giai đoạn: Trứng -> Sâu (ấu trùng) -> Nhộng -> Bướm trưởng thành.',
+    source: 'SGK Khoa học 5, tr. 68',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_07',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Cây con mọc lên từ bộ phận nào',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Cây mía con thường mọc lên từ bộ phận nào của cây mẹ?',
+    options: ['Từ các chồi nách trên đoạn thân cây mía', 'Từ rễ cọc', 'Từ hoa mía'],
+    correctOptionIndex: 0,
+    explanation: 'Mía được nhân giống sinh dưỡng bằng các đoạn thân (hom mía) có chồi nách.',
+    source: 'SGK Khoa học 5, tr. 60',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_08',
+    topicId: 'chud_3',
+    lesson: 'Bài 9: Hoa đơn tính và hoa lưỡng tính',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hoa chỉ có nhị (hoa đực) hoặc chỉ có nhụy (hoa cái) được gọi là gì?',
+    options: ['Hoa đơn tính', 'Hoa lưỡng tính', 'Hoa vô tính'],
+    correctOptionIndex: 0,
+    explanation: 'Hoa đơn tính chỉ chứa một trong hai cơ quan sinh dục đực hoặc cái (như hoa mướp, bí, ngô).',
+    source: 'SGK Khoa học 5, tr. 56',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_09',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Động vật đẻ con và đẻ trứng',
+    type: 'matching',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nối loài động vật với hình thức sinh sản tương ứng:',
+    matchingPairs: [
+      { id: 'md1', left: 'Cá voi', right: 'Đẻ con và nuôi bằng sữa' },
+      { id: 'md2', left: 'Chim cánh cụt', right: 'Đẻ trứng trên cạn' },
+      { id: 'md3', left: 'Ếch đồng', right: 'Đẻ trứng dưới nước' }
+    ],
+    explanation: 'Cá voi là động vật có vú đẻ con; chim cánh cụt đẻ trứng; ếch đẻ trứng thành chùm trong nước.',
+    source: 'SGK Khoa học 5, tr. 65',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_10',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Sự phát triển của hạt',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Điền từ thích hợp vào chỗ trống về các bộ phận của hạt:',
+    blankTemplate: 'Hạt giống gồm có vỏ hạt, {1} và {2}.',
+    blankOptions: ['phôi', 'chất dinh dưỡng dự trữ', 'cành cây', 'hoa'],
+    blankAnswers: ['phôi', 'chất dinh dưỡng dự trữ'],
+    explanation: 'Cấu tạo hạt gồm vỏ bọc ngoài, phôi mầm và phần dự trữ nuôi phôi nảy mầm.',
+    source: 'SGK Khoa học 5, tr. 59',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_11',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Cây con mọc từ lá',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Cây nào sau đây có thể mọc thành cây con từ mép lá?',
+    options: ['Cây lá bỏng (cây sống đời)', 'Cây ngô', 'Cây đậu xanh'],
+    correctOptionIndex: 0,
+    explanation: 'Lá cây bỏng rụng xuống đất ẩm sẽ nảy ra các chồi cây con từ mép răng cưa của lá.',
+    source: 'SGK Khoa học 5, tr. 61',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_12',
+    topicId: 'chud_3',
+    lesson: 'Bài 12: Vòng đời của ếch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Ấu trùng của loài ếch sau khi nở từ trứng được gọi là gì?',
+    options: ['Nòng nọc', 'Nhộng', 'Giòi'],
+    correctOptionIndex: 0,
+    explanation: 'Trứng ếch nở ra con nòng nọc bơi lội dưới nước và thở bằng mang.',
+    source: 'SGK Khoa học 5, tr. 70',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_13',
+    topicId: 'chud_3',
+    lesson: 'Bài 9: Cấu tạo của hoa',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Sau khi thụ tinh, bầu nhụy của hoa sẽ phát triển thành bộ phận nào?',
+    options: ['Quả chứa hạt', 'Lá cây', 'Cánh hoa'],
+    correctOptionIndex: 0,
+    explanation: 'Bầu nhụy phát triển thành quả, còn noãn được thụ tinh phát triển thành hạt.',
+    source: 'SGK Khoa học 5, tr. 58',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_14',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Động vật đẻ con',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Đặc điểm chung của các loài động vật đẻ con và nuôi con bằng sữa là gì?',
+    options: ['Là động vật có vú (lớp Thú)', 'Là động vật biến nhiệt', 'Có lớp lông vũ bao phủ'],
+    correctOptionIndex: 0,
+    explanation: 'Lớp Thú có tuyến sữa nuôi con non sau khi sinh.',
+    source: 'SGK Khoa học 5, tr. 64',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_nb_15',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Điều kiện hạt nảy mầm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Để hạt giống nảy mầm tốt, cần những điều kiện tự nhiên thiết yếu nào?',
+    options: ['Độ ẩm, nhiệt độ thích hợp và không khí (oxy)', 'Phân bón đậm đặc', 'Ánh nắng gay gắt chiếu liên tục'],
+    correctOptionIndex: 0,
+    explanation: 'Nước, nhiệt độ thích hợp và oxy là ba điều kiện tiên quyết giúp hạt thức tỉnh nảy mầm.',
+    source: 'SGK Khoa học 5, tr. 62',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Kết nối
+  {
+    id: 'c3_kn_01',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Sự thụ phấn nhờ côn trùng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Những loài hoa thụ phấn nhờ côn trùng (ong, bướm) thường có đặc điểm gì nổi bật?',
+    options: [
+      'Màu sắc sặc sỡ, có hương thơm và mật ngọt thu hút',
+      'Cánh hoa rất nhỏ hoặc không có, hạt phấn rất nhẹ',
+      'Chỉ nở vào mùa đông lạnh giá'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Màu sắc và hương thơm mật hoa là tín hiệu dẫn dụ ong bướm đến lấy mật và vô tình truyền phấn.',
+    source: 'SGK Khoa học 5, tr. 57',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_02',
+    topicId: 'chud_3',
+    lesson: 'Bài 12: Vòng đời của ếch',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Sắp xếp các giai đoạn phát triển trong vòng đời của loài ếch:',
+    orderingItems: [
+      'Trứng ếch được thụ tinh trong nước',
+      'Nở thành nòng nọc bơi lội, mọc chân sau rồi chân trước',
+      'Rụng đuôi, biến đổi hoàn thiện thành ếch trưởng thành lên cạn'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Trứng nở nòng nọc dưới nước, trải qua biến thái mọc chân, rụng đuôi thành ếch.',
+    source: 'SGK Khoa học 5, tr. 71',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_03',
+    topicId: 'chud_3',
+    lesson: 'Bài 12: Tác hại của sâu bướm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Trong vòng đời của bướm cải, giai đoạn nào phá hoại rau màu nặng nề nhất đối với nông dân?',
+    options: [
+      'Giai đoạn sâu non (ấu trùng)',
+      'Giai đoạn bướm trưởng thành',
+      'Giai đoạn kén nhộng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Sâu non có sức ăn lá rau rất lớn để tích trữ năng lượng trước khi hóa nhộng.',
+    source: 'SGK Khoa học 5, tr. 69',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_04',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Sự phát tán của hạt',
+    type: 'matching',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nối tên loại quả/hạt với phương thức phát tán phù hợp trong tự nhiên:',
+    matchingPairs: [
+      { id: 'mpt1', left: 'Quả bồ công anh', right: 'Phát tán nhờ gió (có túm lông nhẹ)' },
+      { id: 'mpt2', left: 'Quả ké đầu ngựa', right: 'Phát tán nhờ động vật (có móc dính lông)' },
+      { id: 'mpt3', left: 'Quả đậu bắp chín khô', right: 'Tự phát tán (vỏ tự nứt nổ bắn hạt)' }
+    ],
+    explanation: 'Bồ công anh nhờ gió, ké đầu ngựa bám vào lông thú, đậu bắp vỏ khô tự nứt bắn hạt đi xa.',
+    source: 'SGK Khoa học 5, tr. 60',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_05',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Chăm sóc con non',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao số lượng trứng sinh ra của ếch hay cá chép lại rất lớn (hàng nghìn quả), trong khi thú chỉ đẻ từ 1 đến vài con?',
+    options: [
+      'Vì trứng cá và ếch thụ tinh ngoài, dễ bị các loài khác ăn thịt nên phải đẻ nhiều để duy trì nòi giống',
+      'Vì ếch và cá rất khỏe mạnh hơn thú',
+      'Vì trứng thú không cần chăm sóc'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Thụ tinh ngoài tỷ lệ sống sót thấp nên sinh sản số lượng lớn để bù đắp hao hụt.',
+    source: 'SGV Khoa học 5, tr. 72',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_06',
+    topicId: 'chud_3',
+    lesson: 'Bài 9: Sự thụ phấn nhờ gió',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Đặc điểm nào của hoa ngô (bắp) giúp nó thụ phấn thuận lợi nhờ gió?',
+    options: [
+      'Bông cờ ở ngọn chứa nhiều hạt phấn nhẹ dễ bay theo gió rơi xuống râu ngô ở dưới',
+      'Hoa ngô có cánh đỏ rực rỡ và rất nhiều mật ngọt',
+      'Bông ngô tỏa hương thơm ngào ngạt suốt đêm'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cây ngô thụ phấn nhờ gió: nhị phấn ở trên cao bay theo gió chạm vào râu ngô (đầu nhụy).',
+    source: 'SGK Khoa học 5, tr. 57',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_07',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Sinh sản sinh dưỡng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Cây khoai lang và cây khoai tây có thể sinh sản vô tính mọc mầm từ bộ phận nào?',
+    options: [
+      'Khoai lang mọc mầm từ củ (rễ củ), khoai tây mọc từ mắt mầm trên củ (thân củ)',
+      'Cả hai đều mọc mầm từ hạt phấn',
+      'Mọc mầm từ cánh hoa'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Củ khoai lang là rễ phình to, củ khoai tây là thân củ có các mắt mầm sinh dưỡng.',
+    source: 'SGK Khoa học 5, tr. 61',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_08',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Vòng đời của muỗi',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Sắp xếp thứ tự vòng đời của muỗi vằn truyền bệnh sốt xuất huyết:',
+    orderingItems: [
+      'Muỗi cái đẻ trứng vào mặt nước đọng',
+      'Trứng nở thành bọ gậy (lăng quăng) bơi trong nước',
+      'Bọ gậy phát triển thành lăng quăng nhộng rồi nở thành muỗi trưởng thành bay lên'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Trứng -> Bọ gậy -> Nhộng muỗi -> Muỗi trưởng thành bay đi đốt hút máu.',
+    source: 'SGK Khoa học 5, tr. 69',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_kn_09',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Thụ phấn nhân tạo',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'ket_noi',
+    content: 'Điền từ thích hợp:',
+    blankTemplate: 'Con người tiến hành {1} nhân tạo cho hoa mướp, bí ngô để giúp quả {2} đạt năng suất cao.',
+    blankOptions: ['thụ phấn', 'đậu quả', 'cháy khô', 'rụng lá'],
+    blankAnswers: ['thụ phấn', 'đậu quả'],
+    explanation: 'Thụ phấn nhân tạo (lấy nhị hoa đực chấm vào nhụy hoa cái) làm tăng tỷ lệ đậu quả.',
+    source: 'SGK Khoa học 5, tr. 58',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Vận dụng
+  {
+    id: 'c3_vd_01',
+    topicId: 'chud_3',
+    lesson: 'Bài 12: Phòng trừ sâu bướm bảo vệ mùa màng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Để tiêu diệt sâu hại rau bắp cải mà hạn chế sử dụng thuốc hóa học độc hại, người trồng rau nên bắt sâu ở giai đoạn nào?',
+    options: [
+      'Tìm ngắt các ổ trứng hoặc bắt sâu non khi chúng mới nở',
+      'Đợi đến khi sâu đóng kén thành nhộng cứng',
+      'Phun thuốc khi bướm đã bay đi đẻ trứng khắp vườn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Loại bỏ ổ trứng và sâu non ngay từ đầu ngăn chặn kịp thời tác hại cắn phá lá rau.',
+    source: 'SGV Khoa học 5, tr. 73',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_vd_02',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Phòng chống muỗi truyền bệnh',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Dựa vào hiểu biết về vòng đời của muỗi, biện pháp nào hiệu quả và đơn giản nhất để ngăn chặn muỗi sinh sôi quanh nhà?',
+    options: [
+      'Đậy kín các lu chum chứa nước, dọn sạch phế thải đọng nước mưa và thả cá bảy màu ăn bọ gậy',
+      'Thường xuyên xả nước lênh láng khắp sân vườn',
+      'Trồng thật nhiều bụi cây rậm rạp quanh nhà'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cắt đứt môi trường đẻ trứng và tiêu diệt bọ gậy là biện pháp gốc rễ dẹp bỏ muỗi.',
+    source: 'SGK Khoa học 5, tr. 70',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_vd_03',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Gieo hạt nảy mầm',
+    type: 'ordering',
+    cognitiveLevel: 'van_dung',
+    content: 'Sắp xếp quy trình thực hành ngâm ủ hạt giống đậu xanh để đạt tỷ lệ nảy mầm cao nhất:',
+    orderingItems: [
+      'Chọn hạt giống mẩy, rửa sạch và ngâm trong nước ấm (2 sôi 3 lạnh) khoảng 4-6 tiếng',
+      'Vớt hạt ra, bọc vào khăn ẩm sạch và để nơi thoáng mát tránh ánh sáng trực tiếp',
+      'Hàng ngày xả ẩm khăn và quan sát mầm non nhú lên khỏe mạnh'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Quy trình ngâm ủ giúp hạt hút no nước, vỏ hạt mềm ra và kích thích phôi hô hấp nảy mầm.',
+    source: 'SGK Khoa học 5, tr. 62',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_vd_04',
+    topicId: 'chud_3',
+    lesson: 'Bài 10: Nhân giống cây trồng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Bác nông dân muốn nhân giống cây hoa hồng nhanh chóng mà vẫn giữ nguyên màu hoa đỏ thắm của cây mẹ, bác nên chọn phương pháp nào?',
+    options: [
+      'Phương pháp giâm cành hoặc chiết cành từ cây mẹ khỏe mạnh',
+      'Chờ hoa tàn rồi thu hạt đem gieo',
+      'Đào rễ cây đem phơi nắng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Giâm cành là sinh sản sinh dưỡng giữ nguyên vẹn 100% đặc tính di truyền quý của cây mẹ.',
+    source: 'SGK Khoa học 5, tr. 61',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_vd_05',
+    topicId: 'chud_3',
+    lesson: 'Bài 9: Nuôi ong thụ phấn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Tại sao các chủ trang trại trồng nhãn, vải, dưa hấu thường đặt các thùng nuôi ong mật ngay trong vườn cây?',
+    options: [
+      'Ong vừa giúp thụ phấn cho hoa đậu nhiều quả to, vừa cho nguồn mật ong thơm ngon',
+      'Ong sẽ ăn hết hoa để cây tập trung nuôi lá',
+      'Ong bảo vệ vườn không cho chim chóc bay vào'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Lợi ích kép: ong bay tìm mật chuyển hạt phấn giúp hoa cái thụ phấn đạt tỷ lệ đậu trái cao.',
+    source: 'SGV Khoa học 5, tr. 59',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c3_vd_06',
+    topicId: 'chud_3',
+    lesson: 'Bài 11: Bảo vệ chim thú mùa sinh sản',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Vào mùa xuân - mùa sinh sản của các loài chim, hành động nào sau đây của học sinh là đúng đắn?',
+    options: [
+      'Không săn bắn chim mẹ, không phá tổ và không trèo cây trộm trứng chim',
+      'Dùng súng cao su bắn hạ các tổ chim trên cây',
+      'Bắt chim non đem về nhốt lồng sắt'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Bảo vệ chim non và tổ chim trong mùa sinh sản giúp bảo tồn đa dạng sinh học.',
+    source: 'SGK Khoa học 5, tr. 66',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+
+  // ================= CHỦ ĐỀ 4: VI KHUẨN =================
+  // Nhận biết
+  {
+    id: 'c4_nb_01',
+    topicId: 'chud_4',
+    lesson: 'Bài 13: Đặc điểm của vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vi khuẩn có kích thước như thế nào?',
+    options: [
+      'Vô cùng nhỏ bé, chỉ có thể quan sát được dưới kính hiển vi',
+      'Lớn bằng hạt gạo có thể nhìn rõ bằng mắt thường',
+      'To bằng chiếc lá cây'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn là sinh vật đơn bào hiển vi vô cùng nhỏ bé.',
+    source: 'SGK Khoa học 5, tr. 76',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_02',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Vi khuẩn có ích trong đời sống',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Loại thực phẩm nào sau đây được tạo ra nhờ quá trình lên men của vi khuẩn có ích?',
+    options: ['Sữa chua và dưa muối', 'Nước ngọt có gas', 'Bánh mì nướng'],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn lactic lên men đường sữa tạo sữa chua thơm ngon và lên men dưa chua.',
+    source: 'SGK Khoa học 5, tr. 80',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_03',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Vi khuẩn gây hại',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Bệnh nào sau đây do vi khuẩn gây ra ở đường tiêu hóa của người?',
+    options: ['Bệnh tả và bệnh lị', 'Bệnh cận thị', 'Bệnh còi xương'],
+    correctOptionIndex: 0,
+    explanation: 'Phẩy khuẩn tả và trực khuẩn lị gây bệnh tiêu chảy nguy hiểm.',
+    source: 'SGK Khoa học 5, tr. 84',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_04',
+    topicId: 'chud_4',
+    lesson: 'Bài 13: Nơi sống của vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vi khuẩn phân bố ở đâu trong môi trường?',
+    options: [
+      'Ở khắp mọi nơi: trong đất, nước, không khí và trên cơ thể sinh vật',
+      'Chỉ có trong nước sôi 100°C',
+      'Chỉ có trong các phòng thí nghiệm'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn có mặt ở khắp mọi môi trường sống trên Trái Đất.',
+    source: 'SGK Khoa học 5, tr. 77',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_05',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Vi khuẩn phân hủy trong tự nhiên',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Trong tự nhiên, vi khuẩn hoại sinh đóng vai trò gì quan trọng?',
+    options: [
+      'Phân hủy xác động vật và lá cây rụng thành mùn đất màu mỡ',
+      'Hút hết không khí của Trái Đất',
+      'Làm cho kim loại không bị rỉ sét'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn hoại sinh phân giải chất hữu cơ thành chất khoáng nuôi cây.',
+    source: 'SGK Khoa học 5, tr. 81',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_06',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Phòng tránh ngộ độc thực phẩm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nguyên nhân chính khiến thức ăn ôi thiu gây ngộ độc là gì?',
+    options: [
+      'Vi khuẩn có hại xâm nhập, sinh sôi và tiết ra độc tố',
+      'Thức ăn tiếp xúc với ánh sáng',
+      'Thức ăn bị mất mùi thơm'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn sinh sôi trong thức ăn để lâu tiết ra độc tố gây ngộ độc khi ăn phải.',
+    source: 'SGK Khoa học 5, tr. 85',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_07',
+    topicId: 'chud_4',
+    lesson: 'Bài 13: Hình dạng vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vi khuẩn thường có các hình dạng cơ bản nào?',
+    options: ['Hình que, hình cầu, hình xoắn', 'Hình ngôi sao', 'Hình vuông'],
+    correctOptionIndex: 0,
+    explanation: 'Ba hình dạng cơ bản phổ biến của vi khuẩn: trực khuẩn (que), cầu khuẩn (cầu), xoắn khuẩn (xoắn).',
+    source: 'SGK Khoa học 5, tr. 78',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_08',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Vệ sinh phòng ngừa vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Thời điểm nào sau đây cần rửa tay sạch bằng xà phòng dưới vòi nước chảy?',
+    options: [
+      'Trước khi ăn và sau khi đi vệ sinh',
+      'Trước khi đi ngủ 5 phút',
+      'Sau khi đọc xong một trang sách'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Rửa tay trước khi ăn và sau khi đi vệ sinh loại bỏ mầm bệnh xâm nhập đường miệng.',
+    source: 'SGK Khoa học 5, tr. 86',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_09',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Vi khuẩn có ích và có hại',
+    type: 'matching',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nối hoạt động của vi khuẩn với nhóm tương ứng:',
+    matchingPairs: [
+      { id: 'mvk1', left: 'Lên men sữa thành sữa chua thơm ngon', right: 'Vi khuẩn có ích' },
+      { id: 'mvk2', left: 'Làm hôi thối thức ăn, gây ngộ độc', right: 'Vi khuẩn có hại' },
+      { id: 'mvk3', left: 'Vi khuẩn nốt sần rễ đậu cố định đạm', right: 'Vi khuẩn có ích' }
+    ],
+    explanation: 'Vi khuẩn lên men và cố định đạm có ích cho người và cây; vi khuẩn ôi thiu gây hại.',
+    source: 'SGK Khoa học 5, tr. 82',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_10',
+    topicId: 'chud_4',
+    lesson: 'Bài 13: Đặc điểm vi khuẩn',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Điền từ thích hợp vào chỗ trống:',
+    blankTemplate: 'Để tiêu diệt vi khuẩn gây bệnh trong nước uống, chúng ta cần thực hiện {1} sôi và uống {2}.',
+    blankOptions: ['đun', 'nguội', 'làm', 'đá'],
+    blankAnswers: ['đun', 'nguội'],
+    explanation: 'Ăn chín uống sôi là nguyên tắc vàng tiêu diệt vi khuẩn đường ruột.',
+    source: 'SGK Khoa học 5, tr. 87',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_11',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Sâu răng do vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Vi khuẩn trong khoang miệng chuyển hóa mảng bám thức ăn thừa (đường) thành chất gì gây sâu răng?',
+    options: ['Axit ăn mòn men răng', 'Nước tinh khiết', 'Canxi làm cứng răng'],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn phân hủy đường tạo axit phá hủy lớp men và ngà răng.',
+    source: 'SGK Khoa học 5, tr. 84',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_12',
+    topicId: 'chud_4',
+    lesson: 'Bài 13: Dụng cụ quan sát',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Muốn quan sát rõ từng tế bào vi khuẩn, các nhà khoa học phải dùng dụng cụ nào?',
+    options: ['Kính hiển vi quang học hoặc điện tử', 'Kính lúp cầm tay', 'Kính viễn vọng'],
+    correctOptionIndex: 0,
+    explanation: 'Kính hiển vi có độ phóng đại hàng trăm đến hàng nghìn lần mới thấy được vi khuẩn.',
+    source: 'SGK Khoa học 5, tr. 76',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_13',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Vi khuẩn đường ruột',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hệ vi khuẩn có ích sống trong đường ruột của con người giúp ích gì cho sức khỏe?',
+    options: [
+      'Hỗ trợ tiêu hóa thức ăn và ức chế vi khuẩn gây bệnh',
+      'Làm teo nhỏ dạ dày',
+      'Ngăn cản ruột hấp thụ chất dinh dưỡng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Lợi khuẩn đường ruột cân bằng hệ vi sinh, tổng hợp vitamin và hỗ trợ tiêu hóa.',
+    source: 'SGK Khoa học 5, tr. 81',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_14',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Nhiễm trùng vết thương',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Khi bị trầy xước chảy máu, nếu không sát trùng cẩn thận, vết thương sẽ bị làm sao?',
+    options: [
+      'Bị vi khuẩn xâm nhập gây sưng tấy, mưng mủ nhiễm trùng',
+      'Tự lành ngay trong 5 phút',
+      'Hóa thành sẹo màu vàng óng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn ngoài môi trường dễ dàng xâm nhập qua da hở gây mưng mủ, nhiễm trùng máu.',
+    source: 'SGK Khoa học 5, tr. 85',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_nb_15',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Sản xuất phân vi sinh',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Phân vi sinh trong nông nghiệp sạch được chế tạo dựa vào khả năng nào của vi sinh vật?',
+    options: [
+      'Phân giải rác hữu cơ và cố định nitơ làm giàu đất',
+      'Làm đất bị chua và bạc màu',
+      'Tiêu diệt hết rễ cây trồng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn phân giải xenlulozo và cố định đạm giúp tạo nguồn dinh dưỡng tự nhiên cho đất.',
+    source: 'SGK Khoa học 5, tr. 83',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Kết nối
+  {
+    id: 'c4_kn_01',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Quy trình làm sữa chua',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Sắp xếp quy trình làm sữa chua từ sữa tươi và sữa đặc tại nhà:',
+    orderingItems: [
+      'Pha sữa đặc với nước ấm khoảng 40°C - 50°C',
+      'Khuấy đều một hộp sữa chua cái làm men vào hỗn hợp sữa ấm',
+      'Rót vào hũ thủy tinh, đậy nắp và ủ ấm từ 6 đến 8 tiếng để vi khuẩn lên men'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Nhiệt độ 40-50°C thích hợp nhất cho men lactic phát triển; ủ ấm giúp sữa đông đặc và lên men chua.',
+    source: 'SGK Khoa học 5, tr. 82',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_02',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Bảo quản thực phẩm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao việc cất giữ thức ăn trong ngăn mát tủ lạnh lại giúp thức ăn lâu bị ôi thiu hơn?',
+    options: [
+      'Nhiệt độ thấp làm kìm hãm sự phát triển và sinh sôi của vi khuẩn',
+      'Nhiệt độ thấp tiêu diệt 100% tất cả các loại vi khuẩn ngay tức khắc',
+      'Tủ lạnh hút hết chất dinh dưỡng của vi khuẩn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Độ lạnh ức chế quá trình trao đổi chất và làm chậm đáng kể tốc độ nhân đôi của vi khuẩn.',
+    source: 'SGK Khoa học 5, tr. 86',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_03',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Muối dưa cà',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khi muối dưa cải, tại sao người ta cần nén chặt và ngập rau cải trong nước muối ấm?',
+    options: [
+      'Tạo môi trường yếm khí giúp vi khuẩn lactic có ích lên men tốt và ức chế nấm mốc',
+      'Để dưa không bị bay hơi hết nước',
+      'Để dưa cải không biến đổi hóa học'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn lactic phát triển mạnh trong điều kiện nén yếm khí và nồng độ muối vừa phải.',
+    source: 'SGV Khoa học 5, tr. 88',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_04',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Kháng sinh và vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao khi bị bệnh do vi khuẩn, người bệnh phải uống thuốc kháng sinh theo đúng liều lượng và đủ ngày của bác sĩ kê đơn?',
+    options: [
+      'Để tiêu diệt triệt để vi khuẩn, tránh làm vi khuẩn quen thuốc và biến đổi thành chủng kháng thuốc',
+      'Để làm cho thuốc mau hết hạn',
+      'Vì kháng sinh bổ dưỡng như vitamin'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Uống bỏ dở thuốc làm vi khuẩn chưa chết hẳn sẽ sinh đột biến kháng kháng sinh cực kì nguy hiểm.',
+    source: 'SGK Khoa học 5, tr. 87',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_05',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Vi khuẩn nốt sần cây họ đậu',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Bác nông dân thường trồng xen canh cây đậu phộng (lạc) với cây ngô vì lý do khoa học nào?',
+    options: [
+      'Vi khuẩn nốt sần ở rễ cây đậu cố định nitơ từ không khí cung cấp đạm màu mỡ cho đất',
+      'Cây đậu phộng tỏa hương thơm xua đuổi sâu ăn ngô',
+      'Cây ngô hút nước truyền sang cho cây đậu'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn Rhizobium cộng sinh ở nốt sần cây họ Đậu làm giàu đạm tự nhiên cho đất canh tác.',
+    source: 'SGK Khoa học 5, tr. 83',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_06',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Phương pháp bảo quản thực phẩm',
+    type: 'matching',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nối cách bảo quản thực phẩm với nguyên lý ngăn chặn vi khuẩn tương ứng:',
+    matchingPairs: [
+      { id: 'mbq1', left: 'Phơi khô, sấy khô cá mực', right: 'Làm mất nước khiến vi khuẩn không thể sống' },
+      { id: 'mbq2', left: 'Ướp muối đậm hoặc ngâm đường đặc', right: 'Tạo áp suất thẩm thấu cao rút nước tế bào vi khuẩn' },
+      { id: 'mbq3', left: 'Đóng hộp tiệt trùng kín', right: 'Tiêu diệt vi khuẩn ở nhiệt độ cao và cách ly không khí' }
+    ],
+    explanation: 'Mỗi phương pháp ức chế vi khuẩn bằng các yếu tố: ẩm độ, thẩm thấu hoặc nhiệt độ vô trùng.',
+    source: 'SGK Khoa học 5, tr. 86',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_07',
+    topicId: 'chud_4',
+    lesson: 'Bài 13: Tốc độ sinh sản vi khuẩn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Ở điều kiện nhiệt độ phòng ấm áp và giàu chất dinh dưỡng, vi khuẩn nhân đôi với tốc độ như thế nào?',
+    options: [
+      'Rất nhanh, cứ khoảng 20 - 30 phút một tế bào có thể phân chia thành hai tế bào mới',
+      'Mỗi năm nhân đôi một lần',
+      'Không bao giờ nhân đôi thêm'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tốc độ sinh sản của vi khuẩn cực nhanh theo cấp số nhân trong điều kiện thuận lợi.',
+    source: 'SGK Khoa học 5, tr. 79',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_08',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Sát khuẩn vết thương',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'ket_noi',
+    content: 'Điền từ thích hợp:',
+    blankTemplate: 'Cồn y tế hoặc nước muối sinh lí dùng để {1} vết trầy xước nhằm ngăn chặn {2} xâm nhập.',
+    blankOptions: ['sát trùng', 'vi khuẩn', 'bôi trơn', 'nhiệt độ'],
+    blankAnswers: ['sát trùng', 'vi khuẩn'],
+    explanation: 'Dung dịch sát khuẩn tiêu diệt vi khuẩn trên bề mặt da bị tổn thương.',
+    source: 'SGK Khoa học 5, tr. 85',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_kn_09',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Xử lí rác thải sinh hoạt',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao việc phân loại rác thải hữu cơ (thức ăn thừa, vỏ rau củ) để ủ phân compost bằng chế phẩm vi sinh lại có lợi cho môi trường?',
+    options: [
+      'Giảm tải rác chôn lấp, vi sinh vật biến rác thành phân hữu cơ giàu dinh dưỡng cho cây',
+      'Làm tăng rác thải nhựa ngoài biển khơi',
+      'Khiến cho rác bốc mùi nồng nặc hơn khắp thành phố'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Ứng dụng vi sinh vật ủ rác hữu cơ tuần hoàn dinh dưỡng và giảm ô nhiễm môi trường sống.',
+    source: 'SGV Khoa học 5, tr. 89',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Vận dụng
+  {
+    id: 'c4_vd_01',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Vệ sinh an toàn thực phẩm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Mẹ mua thịt lợn tươi về chuẩn bị bữa trưa nhưng có việc đột xuất phải ra ngoài 4 tiếng, em nên giúp mẹ xử lí miếng thịt như thế nào?',
+    options: [
+      'Rửa sạch, cho vào hộp đậy kín rồi cất vào ngăn mát tủ lạnh',
+      'Để miếng thịt trần trên bàn bếp dưới trời nắng hè oi ả',
+      'Ngâm miếng thịt vào chậu nước lã để ngoài sân'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cất ngay vào tủ lạnh ngăn chặn vi khuẩn hoại sinh trong không khí xâm nhập phát triển làm ươn thịt.',
+    source: 'SGK Khoa học 5, tr. 86',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_vd_02',
+    topicId: 'chud_4',
+    lesson: 'Bài 14: Lỗi khi làm sữa chua',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Bạn An làm sữa chua nhưng dùng nước sôi 100°C đổ trực tiếp vào men sữa chua cái. Kết quả sữa chua không đông và không chua. Tại sao?',
+    options: [
+      'Nước sôi 100°C đã làm chết hoàn toàn vi khuẩn lên men lactic trong hộp sữa chua cái',
+      'Vì bạn An cho quá nhiều đường',
+      'Vì ủ quá nhiều thời gian'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Vi khuẩn lactic là sinh vật sống, bị tiêu diệt ở nhiệt độ cao trên 60°C - 70°C, chỉ nên dùng nước ấm 40-45°C.',
+    source: 'SGV Khoa học 5, tr. 82',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_vd_03',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: 6 bước rửa tay sạch',
+    type: 'ordering',
+    cognitiveLevel: 'van_dung',
+    content: 'Sắp xếp trình tự thao tác rửa tay bằng xà phòng theo hướng dẫn của Bộ Y tế:',
+    orderingItems: [
+      'Làm ướt tay dưới vòi nước và thoa xà phòng chà xát hai lòng bàn tay',
+      'Chà mu bàn tay, các kẽ ngón tay, xoay ngón cái và chụm các đầu ngón tay chà lòng bàn tay',
+      'Xả sạch xà phòng dưới vòi nước chảy và lau khô tay bằng khăn sạch'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Quy trình rửa tay chuẩn ít nhất 30 giây giúp đánh bay vi khuẩn ở mọi ngóc ngách kẽ móng tay.',
+    source: 'SGK Khoa học 5, tr. 86',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_vd_04',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Thớt dùng trong gia đình',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Để phòng tránh lây nhiễm chéo vi khuẩn gây bệnh, trong nhà bếp gia đình nên thực hiện điều gì?',
+    options: [
+      'Dùng riêng hai chiếc thớt: một thớt thái thịt sống và một thớt thái thức ăn chín/hoa quả',
+      'Dùng chung một chiếc thớt gỗ nứt nẻ cho mọi loại thực phẩm',
+      'Không bao giờ cần rửa thớt sau khi dùng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tách biệt thớt đồ sống và chín ngăn chặn vi khuẩn từ thịt sống lây vào thức ăn ăn trực tiếp.',
+    source: 'SGK Khoa học 5, tr. 87',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_vd_05',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Vệ sinh răng miệng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Biện pháp nào sau đây giúp học sinh lớp 5 phòng ngừa sâu răng hiệu quả nhất do vi khuẩn?',
+    options: [
+      'Đánh răng ít nhất ngày 2 lần (sáng và tối trước khi ngủ), súc miệng sau khi ăn và hạn chế ăn kẹo ngọt ban đêm',
+      'Ăn thật nhiều đồ ngọt trước khi đi ngủ và không đánh răng',
+      'Uống thật nhiều nước ngọt có gas mỗi ngày'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Loại bỏ mảng bám thức ăn thừa không cho vi khuẩn tạo axit phá hủy men răng.',
+    source: 'SGK Khoa học 5, tr. 84',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c4_vd_06',
+    topicId: 'chud_4',
+    lesson: 'Bài 15: Ăn uống đường phố an toàn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi đi học về đói bụng, nhìn thấy một quán hàng rong bán thức ăn bày trên vỉa hè đầy bụi bặm và có nhiều ruồi nhặng bu quanh, em nên làm gì?',
+    options: [
+      'Kiên quyết không mua ăn, về nhà rửa tay và ăn đồ ăn nấu chín đảm bảo vệ sinh',
+      'Mua ăn ngay vì nhìn rất hấp dẫn',
+      'Dùng tay xua bớt ruồi rồi bốc ăn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Ruồi nhặng mang theo hàng triệu vi khuẩn gây tiêu chảy, kiết lị từ rác bẩn truyền sang thức ăn.',
+    source: 'SGK Khoa học 5, tr. 85',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+
+  // ================= CHỦ ĐỀ 5: CON NGƯỜI VÀ SỨC KHỎE =================
+  // Nhận biết
+  {
+    id: 'c5_nb_01',
+    topicId: 'chud_5',
+    lesson: 'Bài 16: Sự sinh sản ở người',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Cơ thể người được hình thành từ sự kết hợp của tế bào nào?',
+    options: [
+      'Tinh trùng của bố và trứng của mẹ',
+      'Hai tế bào trứng của mẹ',
+      'Hai tế bào tinh trùng của bố'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Sự thụ tinh giữa tinh trùng và trứng tạo thành hợp tử, phát triển thành cơ thể người.',
+    source: 'SGK Khoa học 5, tr. 90',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_02',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Tuổi dậy thì',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Tuổi dậy thì ở con gái thường bắt đầu trong độ tuổi nào?',
+    options: ['Khoảng từ 10 đến 15 tuổi', 'Khoảng từ 3 đến 6 tuổi', 'Khoảng từ 20 đến 25 tuổi'],
+    correctOptionIndex: 0,
+    explanation: 'Con gái thường dậy thì vào khoảng 10 - 15 tuổi, sớm hơn con trai khoảng 1-2 năm.',
+    source: 'SGK Khoa học 5, tr. 94',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_03',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Phòng bệnh sốt xuất huyết',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Con vật trung gian truyền bệnh sốt xuất huyết sang người là gì?',
+    options: ['Muỗi vằn', 'Muỗi Anophen', 'Ruồi nhà'],
+    correctOptionIndex: 0,
+    explanation: 'Muỗi vằn (Aedes aegypti) hút máu người bệnh rồi đốt truyền virus Dengue sang người lành.',
+    source: 'SGK Khoa học 5, tr. 98',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_04',
+    topicId: 'chud_5',
+    lesson: 'Bài 19: Phòng bệnh sốt rét',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Bệnh sốt rét lây truyền qua con đường nào?',
+    options: ['Do muỗi Anophen đốt truyền ký sinh trùng sốt rét', 'Do bắt tay người bệnh', 'Do ăn thức ăn cay'],
+    correctOptionIndex: 0,
+    explanation: 'Muỗi Anophen mang ký sinh trùng sốt rét Plasmodium truyền vào máu người khi đốt.',
+    source: 'SGK Khoa học 5, tr. 102',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_05',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Biến đổi ở tuổi dậy thì',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Dấu hiệu biến đổi cơ thể ở bạn nam trong độ tuổi dậy thì là gì?',
+    options: [
+      'Vỡ giọng (giọng trầm ồm), mọc ria mép, phát triển chiều cao nhanh',
+      'Giọng nói trở nên trong veo như em bé',
+      'Rụng hết răng sữa'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Bạn nam dậy thì có sự thay đổi giọng nói, mọc ria mép, cơ bắp và xương phát triển nhanh.',
+    source: 'SGK Khoa học 5, tr. 95',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_06',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Phòng tránh bị xâm hại',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Quy tắc đồ lót dạy chúng ta: Những vùng riêng tư trên cơ thể bao gồm những vị trí nào?',
+    options: [
+      'Vùng ngực, vùng giữa hai đùi (bộ phận sinh dục), mông và miệng',
+      'Bàn tay và cánh tay',
+      'Bàn chân và cẳng chân'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Các vùng đồ lót che kín và miệng là vùng riêng tư bất khả xâm phạm.',
+    source: 'SGK Khoa học 5, tr. 106',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_07',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Tập tính muỗi vằn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Muỗi vằn truyền bệnh sốt xuất huyết thường đốt người vào thời gian nào?',
+    options: [
+      'Ban ngày, nhiều nhất vào sáng sớm và chập tối',
+      'Chỉ đốt vào lúc nửa đêm',
+      'Không bao giờ đốt người'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Muỗi vằn hoạt động và đốt mạnh nhất vào ban ngày, đặc biệt là sáng sớm và chiều tà.',
+    source: 'SGK Khoa học 5, tr. 99',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_08',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Vệ sinh tuổi dậy thì',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Ở tuổi dậy thì, tuyến mồ hôi và bã nhờn hoạt động mạnh nên các em cần chú ý điều gì?',
+    options: [
+      'Tắm rửa vệ sinh cơ thể sạch sẽ mỗi ngày và thay đồ lót thường xuyên',
+      'Không cần tắm giặt để giữ ẩm',
+      'Chỉ tắm một lần mỗi tháng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tắm rửa sạch sẽ bằng xà phòng giúp cơ thể thơm tho, phòng tránh mụn trứng cá và viêm nhiễm.',
+    source: 'SGK Khoa học 5, tr. 96',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_09',
+    topicId: 'chud_5',
+    lesson: 'Bài 18, 19: Bệnh truyền nhiễm do côn trùng',
+    type: 'matching',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nối tên bệnh truyền nhiễm với loài muỗi trung gian truyền bệnh:',
+    matchingPairs: [
+      { id: 'mbm1', left: 'Bệnh sốt xuất huyết', right: 'Muỗi vằn (có đốm trắng đen)' },
+      { id: 'mbm2', left: 'Bệnh sốt rét', right: 'Muỗi Anophen (đuôi chổng ngược khi đậu)' },
+      { id: 'mbm3', left: 'Bệnh viêm não Nhật Bản', right: 'Muỗi Culex (muỗi đồng ruộng)' }
+    ],
+    explanation: 'Mỗi loại bệnh do một loài muỗi đặc thù làm vật chủ trung gian truyền mầm bệnh.',
+    source: 'SGK Khoa học 5, tr. 101',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_10',
+    topicId: 'chud_5',
+    lesson: 'Bài 16: Quá trình thụ tinh',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Chọn từ thích hợp điền vào chỗ trống:',
+    blankTemplate: 'Khi tinh trùng kết hợp với trứng sẽ tạo thành {1}, sau đó phát triển thành {2} trong bụng mẹ.',
+    blankOptions: ['hợp tử', 'thai nhi', 'tế bào da', 'xương'],
+    blankAnswers: ['hợp tử', 'thai nhi'],
+    explanation: 'Hợp tử phân chia nhiều lần hình thành phôi thai và phát triển thành thai nhi hoàn chỉnh.',
+    source: 'SGK Khoa học 5, tr. 91',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_11',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Quyền bất khả xâm phạm',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Ai là người có quyền được chạm vào vùng kín của em để kiểm tra sức khỏe?',
+    options: [
+      'Bác sĩ hoặc y tá khi có bố mẹ hoặc người giám hộ đi cùng',
+      'Người lạ gặp trên đường phố',
+      'Hàng xóm khi không có ai ở nhà'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Chỉ bác sĩ khám chữa bệnh khi có sự đồng ý và chứng kiến của bố mẹ mới được phép chạm vào vùng riêng tư.',
+    source: 'SGK Khoa học 5, tr. 107',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_12',
+    topicId: 'chud_5',
+    lesson: 'Bài 19: Triệu chứng sốt rét',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Cơn sốt rét điển hình thường diễn ra theo chu kì nào?',
+    options: [
+      'Rét run -> Sốt nóng cao độ -> Toát mồ hôi hạ sốt',
+      'Chỉ hắt hơi nhẹ',
+      'Đau bụng âm ỉ'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Ba giai đoạn điển hình của cơn sốt rét: rét run dữ dội, sốt nóng bừng bừng và toát nhiều mồ hôi.',
+    source: 'SGK Khoa học 5, tr. 103',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_13',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Dinh dưỡng tuổi dậy thì',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Để cơ thể phát triển tối đa chiều cao và thể lực ở tuổi dậy thì, các em cần:',
+    options: [
+      'Ăn đủ 4 nhóm chất dinh dưỡng, ngủ đủ 8 tiếng và chăm tập thể dục thể thao',
+      'Thức khuya chơi game và ăn mì gói',
+      'Ăn kiêng nhịn đói để thật gầy'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Dinh dưỡng cân bằng kết hợp giấc ngủ sâu trước 22h và vận động kích thích hormone tăng trưởng.',
+    source: 'SGK Khoa học 5, tr. 97',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_14',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Dấu hiệu sốt xuất huyết',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Dấu hiệu nhận biết người bị mắc bệnh sốt xuất huyết là gì?',
+    options: [
+      'Sốt cao đột ngột liên tục, đau đầu, nhức hai hốc mắt và có các chấm xuất huyết dưới da',
+      'Bị sưng to ngón chân cái',
+      'Bị ngứa ở lòng bàn tay'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Sốt cao không hạ, đau mỏi cơ khớp, chấm ban xuất huyết đỏ li ti là triệu chứng của sốt xuất huyết.',
+    source: 'SGK Khoa học 5, tr. 99',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_nb_15',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Đường dây nóng bảo vệ trẻ em',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Số tổng đài điện thoại quốc gia bảo vệ trẻ em tại Việt Nam miễn phí 24/7 là số nào?',
+    options: ['111', '113', '115'],
+    correctOptionIndex: 0,
+    explanation: 'Tổng đài quốc gia 111 tiếp nhận mọi thông tin tố giác và bảo vệ trẻ em khỏi nguy cơ bị bạo lực, xâm hại.',
+    source: 'SGK Khoa học 5, tr. 108',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Kết nối
+  {
+    id: 'c5_kn_01',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Phòng muỗi đốt',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao việc ngủ trong màn (mùng) kể cả ban ngày lại là cách phòng bệnh sốt xuất huyết hiệu quả?',
+    options: [
+      'Vì muỗi vằn có tập tính bay vào nhà đốt người chủ yếu vào ban ngày',
+      'Vì màn ngăn không khí lạnh tràn vào',
+      'Vì màn làm muỗi sợ ánh sáng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Muỗi vằn đốt ban ngày nên ngủ ngày cũng cần mắc màn để tránh bị muỗi mang virus truyền bệnh.',
+    source: 'SGK Khoa học 5, tr. 100',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_02',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Quy tắc 5 ngón tay',
+    type: 'matching',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nối từng ngón tay trong quy tắc 5 ngón tay bảo vệ bản thân với nhóm người tương ứng:',
+    matchingPairs: [
+      { id: 'm5n1', left: 'Ngón cái (ôm hôn)', right: 'Bố mẹ, anh chị em ruột, ông bà ruột' },
+      { id: 'm5n2', left: 'Ngón trỏ (khoác tay, nắm tay)', right: 'Thầy cô, bạn bè, họ hàng thân thiết' },
+      { id: 'm5n3', left: 'Ngón út (xua tay, không tiếp xúc)', right: 'Người hoàn toàn xa lạ' }
+    ],
+    explanation: 'Quy tắc 5 ngón tay giúp trẻ thiết lập ranh giới giao tiếp an toàn với từng đối tượng.',
+    source: 'SGK Khoa học 5, tr. 107',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_03',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Kĩ năng ứng phó khi bị đe dọa xâm hại',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khi gặp người có hành vi cố ý chạm vào vùng kín hoặc kéo em đi, em cần thực hiện hành động gì theo thứ tự:',
+    orderingItems: [
+      'Hét thật to “KHÔNG ĐƯỢC CHẠM VÀO TÔI!” để phản đối',
+      'Vùng chạy thật nhanh đến nơi đông người hoặc nhà có người lớn',
+      'Kể lại ngay lập tức toàn bộ sự việc cho bố mẹ hoặc thầy cô giáo tin cậy'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Ba bước cơ bản: Từ chối dứt khoát -> Chạy thoát thân -> Kể cho người lớn đáng tin cậy.',
+    source: 'SGV Khoa học 5, tr. 109',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_04',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Tâm lí tuổi dậy thì',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Ở tuổi dậy thì, các em thường có những biến đổi về tâm lí như thế nào?',
+    options: [
+      'Muốn khẳng định bản thân độc lập, nhạy cảm hơn, bắt đầu chú ý đến ngoại hình và bạn khác giới',
+      'Không quan tâm đến bất kì điều gì xung quanh',
+      'Trở lại tính cách như em bé 2 tuổi'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Sự thay đổi hormone kích hoạt nhận thức xã hội, nhu cầu tự lập và phát triển cảm xúc mới.',
+    source: 'SGK Khoa học 5, tr. 96',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_05',
+    topicId: 'chud_5',
+    lesson: 'Bài 19: Cắt đứt đường lây sốt rét',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khi đi du lịch hoặc vào rừng ở vùng đang có dịch sốt rét lưu hành, em nên làm gì?',
+    options: [
+      'Mặc quần áo dài tay, thoa kem chống muỗi và ngủ màn tẩm hóa chất xua diệt muỗi',
+      'Tắm suối vào ban đêm và ngủ ngoài trời',
+      'Uống thật nhiều nước chưa đun sôi'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Quần áo dài tay và màn tẩm hóa chất ngăn ngừa muỗi Anophen đốt truyền ký sinh trùng vào máu.',
+    source: 'SGK Khoa học 5, tr. 104',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_06',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Chiến dịch diệt lăng quăng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khẩu hiệu “Không có bọ gậy (lăng quăng), không có sốt xuất huyết” nhấn mạnh điều gì?',
+    options: [
+      'Diệt ấu trùng bọ gậy tận gốc trong các vật chứa nước sẽ ngăn chặn muỗi trưởng thành sinh sôi',
+      'Muỗi vằn không cần nước vẫn đẻ trứng được',
+      'Chỉ cần bắt muỗi trưởng thành là đủ'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Bọ gậy sống dưới nước đọng, diệt bọ gậy dễ dàng và triệt để hơn nhiều so với đuổi muỗi bay.',
+    source: 'SGK Khoa học 5, tr. 100',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_07',
+    topicId: 'chud_5',
+    lesson: 'Bài 16: Trách nhiệm đối với thai phụ',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao mọi người trong gia đình và xã hội cần quan tâm, nhường nhịn và chăm sóc phụ nữ mang thai?',
+    options: [
+      'Vì sức khỏe thể chất và tinh thần của người mẹ ảnh hưởng trực tiếp đến sự phát triển của thai nhi',
+      'Vì người mang thai không thể tự đi lại được',
+      'Vì thai nhi không cần dinh dưỡng từ mẹ'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Người mẹ khỏe mạnh, lạc quan sẽ giúp thai nhi phát triển toàn diện cả về thể chất lẫn não bộ.',
+    source: 'SGK Khoa học 5, tr. 92',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_08',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Rèn luyện tuổi dậy thì',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'ket_noi',
+    content: 'Điền từ còn thiếu vào chỗ trống:',
+    blankTemplate: 'Học sinh tuổi dậy thì tuyệt đối không sử dụng các chất kích thích như {1}, rượu bia và {2}.',
+    blankOptions: ['thuốc lá', 'ma túy', 'sữa tươi', 'nước cam'],
+    blankAnswers: ['thuốc lá', 'ma túy'],
+    explanation: 'Chất gây nghiện tàn phá hệ thần kinh non nớt và gây hại khôn lường cho sức khỏe tuổi học trò.',
+    source: 'SGK Khoa học 5, tr. 97',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_kn_09',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Bí mật an toàn và không an toàn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Thế nào là một “bí mật xấu (không an toàn)” mà em không được giữ kín?',
+    options: [
+      'Bí mật làm em cảm thấy lo sợ, khó chịu, bị ai đó dọa nạt bắt không được nói cho bố mẹ biết',
+      'Món quà sinh nhật em chuẩn bị bí mật để tặng mẹ',
+      'Bí mật chuẩn bị bài hát tặng cô giáo nhân ngày 20/11'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Bất kì điều gì làm em bất an hoặc bị kẻ xấu ép giữ im lặng đều phải nói ngay với bố mẹ.',
+    source: 'SGV Khoa học 5, tr. 110',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Vận dụng
+  {
+    id: 'c5_vd_01',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Tình huống phòng tránh xâm hại',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Một người hàng xóm lạ rủ em vào nhà riêng chơi game và hứa cho kẹo nhưng với điều kiện đóng kín cửa lại. Em sẽ làm gì?',
+    options: [
+      'Lịch sự từ chối ngay: “Cháu cảm ơn, nhưng bố mẹ dặn cháu phải xin phép trước ạ” rồi đi về nhà',
+      'Đồng ý vào ngay vì rất thích chơi game và ăn kẹo',
+      'Vào nhà và để người đó khóa cửa lại'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Không bao giờ vào phòng kín với người lạ khi không có sự đồng ý và đi cùng của người giám hộ.',
+    source: 'SGK Khoa học 5, tr. 108',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_vd_02',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Hành động vệ sinh môi trường gia đình',
+    type: 'ordering',
+    cognitiveLevel: 'van_dung',
+    content: 'Vào chiều Chủ nhật, em cùng gia đình dọn dẹp nhà cửa để phòng chống sốt xuất huyết theo các bước:',
+    orderingItems: [
+      'Thu gom mảnh chai lọ, vỏ dừa, lốp xe cũ quanh vườn đem tiêu hủy để không đọng nước',
+      'Cọ rửa các chum vại, thay nước bình cắm hoa và lật úp các xô chậu không dùng',
+      'Thả cá bảy màu con vào bể nước ngầm để tiêu diệt hết lăng quăng'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Hành động dọn dẹp triệt phá nơi đẻ trứng của muỗi vằn bảo vệ sức khỏe cho cả gia đình và lối xóm.',
+    source: 'SGK Khoa học 5, tr. 100',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_vd_03',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Giúp bạn hiểu đúng về dậy thì',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Trong lớp, một bạn nam bắt đầu bị vỡ giọng ồm ồm và bị một số bạn trêu chọc. Em sẽ làm gì?',
+    options: [
+      'Giải thích cho các bạn hiểu đây là hiện tượng sinh lí tự nhiên bình thường của tuổi dậy thì và nhắc các bạn không trêu chọc',
+      'Cùng hùa theo các bạn khác cười nhạo bạn',
+      'Cô lập và xa lánh bạn'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Hiểu biết khoa học giúp học sinh tôn trọng sự phát triển cơ thể của bản thân và bạn bè.',
+    source: 'SGV Khoa học 5, tr. 97',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_vd_04',
+    topicId: 'chud_5',
+    lesson: 'Bài 18: Xử trí khi nghi ngờ mắc sốt xuất huyết',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Em trai của Hoa bị sốt cao 39.5°C liên tục 2 ngày, xuất hiện vết ban đỏ trên cánh tay. Hoa nên khuyên bố mẹ làm gì?',
+    options: [
+      'Đưa em đến ngay trạm y tế hoặc bệnh viện gần nhất để bác sĩ thăm khám và xét nghiệm máu',
+      'Tự ý ra hiệu thuốc mua thuốc kháng sinh liều cao về cho em uống',
+      'Đắp chăn thật dày và đóng kín cửa phòng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Sốt xuất huyết do virus, uống kháng sinh không có tác dụng và tự dùng thuốc có thể gây xuất huyết dạ dày.',
+    source: 'SGK Khoa học 5, tr. 101',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_vd_05',
+    topicId: 'chud_5',
+    lesson: 'Bài 20: Tình huống khi đi thang máy một mình',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi đứng chờ thang máy ở khu chung cư, có một người lạ nhìn chằm chằm và có cử chỉ đáng ngờ muốn vào cùng thang máy với em. Em nên làm gì?',
+    options: [
+      'Không bước vào thang máy, lùi lại giả vờ chờ bố mẹ hoặc đợi chuyến sau có đông người',
+      'Bước vào và đứng quay lưng lại người đó trong góc tối',
+      'Đóng cửa thang máy đi chung một mình với người lạ'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tránh rơi vào không gian kín một mình với đối tượng khả nghi là nguyên tắc an toàn quan trọng.',
+    source: 'SGK Khoa học 5, tr. 108',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c5_vd_06',
+    topicId: 'chud_5',
+    lesson: 'Bài 17: Vệ sinh cá nhân mùa thi',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Để giữ gìn đôi mắt sáng và tinh thần sảng khoái khi học tập ôn thi cuối năm, em nên thực hiện thói quen nào?',
+    options: [
+      'Học nơi đủ ánh sáng, ngồi thẳng lưng, sau 45 phút cho mắt nghỉ ngơi ngắm cây xanh xa',
+      'Nằm bò ra sàn nhà đọc sách dưới bóng đèn lờ mờ',
+      'Dán mắt sát màn hình điện thoại liên tục 4 tiếng'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tư thế đúng, đủ sáng và giải lao xen kẽ giúp bảo vệ thị lực và tăng khả năng ghi nhớ của não bộ.',
+    source: 'SGK Khoa học 5, tr. 98',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+
+  // ================= CHỦ ĐỀ 6: SINH VẬT VÀ MÔI TRƯỜNG =================
+  // Nhận biết
+  {
+    id: 'c6_nb_01',
+    topicId: 'chud_6',
+    lesson: 'Bài 21: Môi trường và tài nguyên thiên nhiên',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Môi trường bao gồm những yếu tố nào xung quanh chúng ta?',
+    options: [
+      'Các yếu tố tự nhiên (đất, nước, không khí, sinh vật) và các yếu tố nhân tạo do con người tạo ra',
+      'Chỉ gồm rừng cây và sông hồ',
+      'Chỉ gồm các tòa nhà và đường sá'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Môi trường là toàn thể các yếu tố tự nhiên và xã hội bao quanh con người và sinh vật.',
+    source: 'SGK Khoa học 5, tr. 112',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_02',
+    topicId: 'chud_6',
+    lesson: 'Bài 22: Chuỗi thức ăn trong tự nhiên',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Trong một chuỗi thức ăn tự nhiên, sinh vật nào thường là mắt xích đầu tiên?',
+    options: ['Sinh vật sản xuất (cây xanh, thực vật)', 'Động vật ăn thịt', 'Động vật ăn cỏ'],
+    correctOptionIndex: 0,
+    explanation: 'Thực vật quang hợp tự tổng hợp chất hữu cơ từ năng lượng mặt trời là sinh vật khởi đầu chuỗi thức ăn.',
+    source: 'SGK Khoa học 5, tr. 116',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_03',
+    topicId: 'chud_6',
+    lesson: 'Bài 23: Tác động của con người đến môi trường',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Hành động nào sau đây của con người gây ô nhiễm nguồn nước nghiêm trọng?',
+    options: [
+      'Xả trực tiếp nước thải công nghiệp và rác sinh hoạt chưa qua xử lí ra sông suối',
+      'Trồng rừng ngập mặn ven biển',
+      'Thu gom chai nhựa tái chế'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nước thải chứa hóa chất độc hại và rác hữu cơ làm chết sinh vật thủy sinh và ô nhiễm nước.',
+    source: 'SGK Khoa học 5, tr. 120',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_04',
+    topicId: 'chud_6',
+    lesson: 'Bài 21: Tài nguyên thiên nhiên',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Tài nguyên nào sau đây có nguy cơ bị cạn kiệt nếu khai thác quá mức?',
+    options: ['Dầu mỏ và than đá', 'Năng lượng Mặt Trời', 'Năng lượng gió'],
+    correctOptionIndex: 0,
+    explanation: 'Khoáng sản hóa thạch mất hàng triệu năm hình thành nên là tài nguyên không tái tạo, dễ cạn kiệt.',
+    source: 'SGK Khoa học 5, tr. 114',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_05',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Bảo vệ môi trường',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Rừng có vai trò như thế nào đối với sự sống trên Trái Đất?',
+    options: [
+      'Được ví như “lá phổi xanh” hấp thụ CO2, nhả O2 và điều hòa khí hậu',
+      'Làm cho khí hậu khô hạn nóng bức hơn',
+      'Gây sạt lở đất đồi núi'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tán rừng xanh quang hợp lọc không khí, rễ cây giữ đất chống xói mòn và giữ nguồn nước ngầm.',
+    source: 'SGK Khoa học 5, tr. 124',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_06',
+    topicId: 'chud_6',
+    lesson: 'Bài 22: Chuỗi thức ăn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Quan sát chuỗi thức ăn: Cỏ -> Châu chấu -> Ếch đồng -> Rắn. Sinh vật nào ăn châu chấu?',
+    options: ['Ếch đồng', 'Cỏ', 'Rắn'],
+    correctOptionIndex: 0,
+    explanation: 'Mũi tên chỉ từ châu chấu sang ếch đồng biểu thị châu chấu là thức ăn của ếch.',
+    source: 'SGK Khoa học 5, tr. 117',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_07',
+    topicId: 'chud_6',
+    lesson: 'Bài 23: Nạn phá rừng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Việc chặt phá rừng bừa bãi dẫn đến hậu quả trực tiếp nào?',
+    options: [
+      'Lũ lụt, sạt lở đất đồi núi và mất nơi cư trú của động vật hoang dã',
+      'Đất đai màu mỡ và phì nhiêu hơn',
+      'Thời tiết mát mẻ quanh năm'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Mất thảm thực vật che phủ làm nước mưa xối mòn đất đai gây lũ quét, hạn hán khốc liệt.',
+    source: 'SGK Khoa học 5, tr. 121',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_08',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Phân loại rác thải',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Loại rác nào sau đây thuộc nhóm rác tái chế được?',
+    options: ['Chai nhựa, lon nhôm, giấy báo cũ', 'Vỏ chuối, cọng rau hỏng', 'Bông băng y tế đã qua sử dụng'],
+    correctOptionIndex: 0,
+    explanation: 'Nhựa, kim loại nhôm và giấy là nguyên liệu có thể thu hồi chế biến thành sản phẩm mới.',
+    source: 'SGK Khoa học 5, tr. 126',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_09',
+    topicId: 'chud_6',
+    lesson: 'Bài 21: Môi trường sống của sinh vật',
+    type: 'matching',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Nối sinh vật với môi trường sống tự nhiên đặc trưng của nó:',
+    matchingPairs: [
+      { id: 'msh1', left: 'Cá heo, san hô', right: 'Môi trường nước mặn (đại dương)' },
+      { id: 'msh2', left: 'Giun đất, dế mèn', right: 'Môi trường trong đất' },
+      { id: 'msh3', left: 'Cây thông, hươu sao', right: 'Môi trường cạn (trên mặt đất, rừng núi)' }
+    ],
+    explanation: 'Mỗi loài sinh vật thích nghi hoàn hảo với điều kiện sống trong môi trường riêng của mình.',
+    source: 'SGK Khoa học 5, tr. 113',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_10',
+    topicId: 'chud_6',
+    lesson: 'Bài 22: Mắt xích chuỗi thức ăn',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Điền từ thích hợp vào chỗ trống:',
+    blankTemplate: 'Trong chuỗi thức ăn, chất dinh dưỡng được truyền từ sinh vật này sang sinh vật khác qua quan hệ {1} và {2}.',
+    blankOptions: ['con mồi', 'vật ăn thịt', 'bạn bè', 'cộng sinh'],
+    blankAnswers: ['con mồi', 'vật ăn thịt'],
+    explanation: 'Chuỗi thức ăn thể hiện mối quan hệ dinh dưỡng ai ăn ai trong tự nhiên.',
+    source: 'SGK Khoa học 5, tr. 118',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_11',
+    topicId: 'chud_6',
+    lesson: 'Bài 23: Ô nhiễm không khí',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Khí thải từ các nhà máy và phương tiện giao thông chạy bằng xăng dầu gây ô nhiễm môi trường nào?',
+    options: ['Môi trường không khí', 'Chỉ môi trường đất', 'Chỉ môi trường nước ngầm sâu'],
+    correctOptionIndex: 0,
+    explanation: 'Khói bụi mịn, khí SO2, CO, NOx xả thẳng vào bầu khí quyển gây ô nhiễm không khí nặng.',
+    source: 'SGK Khoa học 5, tr. 122',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_12',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Tiết kiệm nước sạch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Tại sao chúng ta phải sử dụng tiết kiệm nước ngọt sạch?',
+    options: [
+      'Vì lượng nước ngọt sạch trên Trái Đất có hạn và đang bị ô nhiễm',
+      'Vì nước biển sắp cạn kiệt',
+      'Vì không có nhà máy nào lọc được nước'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Nước ngọt chỉ chiếm chưa đầy 3% tổng lượng nước trên Trái Đất và phần lớn nằm ở băng tuyết cực.',
+    source: 'SGK Khoa học 5, tr. 125',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_13',
+    topicId: 'chud_6',
+    lesson: 'Bài 21: Đất canh tác',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Lạm dụng quá nhiều thuốc trừ sâu và phân bón hóa học lâu năm sẽ làm đất trồng như thế nào?',
+    options: [
+      'Bị chai cứng, chua hóa bạc màu và tiêu diệt các sinh vật có ích trong đất',
+      'Càng ngày càng tơi xốp tự nhiên',
+      'Biến thành kim cương'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tồn dư hóa chất làm suy kiệt hệ vi sinh tự nhiên, làm đất chai cứng mất độ màu mỡ.',
+    source: 'SGK Khoa học 5, tr. 115',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_14',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Trồng cây xanh',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Việc trồng cây xanh quanh trường học và đường phố mang lại lợi ích gì?',
+    options: [
+      'Tạo bóng mát, thanh lọc bụi bẩn, giảm tiếng ồn và tạo cảnh quan tươi đẹp',
+      'Làm không khí nóng nực hơn',
+      'Làm tắc cống rãnh thành phố'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cây xanh cản bụi, hấp thụ tiếng ồn và tỏa hơi nước làm dịu mát môi trường học đường.',
+    source: 'SGK Khoa học 5, tr. 127',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_nb_15',
+    topicId: 'chud_6',
+    lesson: 'Bài 22: Sinh vật phân giải',
+    type: 'multiple_choice',
+    cognitiveLevel: 'nhan_biet',
+    content: 'Trong chuỗi thức ăn, vi khuẩn và nấm hoại sinh đóng vai trò là sinh vật gì?',
+    options: ['Sinh vật phân giải', 'Sinh vật sản xuất', 'Sinh vật tiêu thụ bậc 1'],
+    correctOptionIndex: 0,
+    explanation: 'Sinh vật phân giải khép kín chu trình dinh dưỡng bằng cách phân hủy xác hữu cơ thành khoáng chất.',
+    source: 'SGK Khoa học 5, tr. 118',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Kết nối
+  {
+    id: 'c6_kn_01',
+    topicId: 'chud_6',
+    lesson: 'Bài 22: Chuỗi thức ăn trên đồng ruộng',
+    type: 'ordering',
+    cognitiveLevel: 'ket_noi',
+    content: 'Hãy sắp xếp các sinh vật sau thành một chuỗi thức ăn hoàn chỉnh trên cánh đồng lúa:',
+    orderingItems: [
+      'Cây lúa trổ bông hạt mẩy',
+      'Chuột đồng ăn thóc lúa',
+      'Rắn hổ mang bắt chuột đồng làm mồi',
+      'Chim đại bàng bắt rắn'
+    ],
+    correctOrder: [0, 1, 2, 3],
+    explanation: 'Lúa (sinh vật sản xuất) -> Chuột (tiêu thụ bậc 1) -> Rắn (tiêu thụ bậc 2) -> Đại bàng (tiêu thụ bậc cao).',
+    source: 'SGK Khoa học 5, tr. 117',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_02',
+    topicId: 'chud_6',
+    lesson: 'Bài 22: Cân bằng sinh thái',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nếu con người săn bắt tận diệt các loài rắn trên đồng ruộng, điều gì sẽ xảy ra?',
+    options: [
+      'Số lượng chuột đồng sẽ tăng vọt nhanh chóng, cắn phá tàn khốc mùa màng',
+      'Cây lúa sẽ mọc tốt hơn nhiều',
+      'Chuột đồng sẽ tự động bỏ đi nơi khác'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Mất đi mắt xích động vật ăn thịt (rắn) làm con mồi (chuột) mất kiểm soát sinh sôi phá hoại.',
+    source: 'SGK Khoa học 5, tr. 119',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_03',
+    topicId: 'chud_6',
+    lesson: 'Bài 23: Ô nhiễm rác thải nhựa',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao túi ni lông và đồ nhựa dùng một lần bị coi là “ô nhiễm trắng” nguy hại cho đất và nước?',
+    options: [
+      'Vì chúng rất khó phân hủy, mất hàng trăm năm tồn tại làm nghẹt đất, tắc nguồn nước và độc hại cho sinh vật biển',
+      'Vì chúng có màu trắng rất đẹp',
+      'Vì chúng làm tăng độ phì nhiêu cho đất'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Rác nhựa tồn lưu dai dẳng, rã thành vi nhựa đầu độc đất nước và sinh vật trong chuỗi thức ăn.',
+    source: 'SGK Khoa học 5, tr. 123',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_04',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Mô hình 3R bảo vệ môi trường',
+    type: 'matching',
+    cognitiveLevel: 'ket_noi',
+    content: 'Nối chữ cái trong mô hình 3R bảo vệ môi trường với hành động cụ thể:',
+    matchingPairs: [
+      { id: 'm3r1', left: 'Reduce (Giảm thiểu)', right: 'Hạn chế dùng túi ni lông, từ chối đồ nhựa dùng một lần' },
+      { id: 'm3r2', left: 'Reuse (Tái sử dụng)', right: 'Dùng chai thủy tinh đựng nước nhiều lần, tận dụng quần áo cũ' },
+      { id: 'm3r3', left: 'Recycle (Tái chế)', right: 'Gom giấy vụn vụn vỏ lon giao cho nhà máy chế biến lại' }
+    ],
+    explanation: 'Nguyên tắc 3R là cốt lõi trong lối sống xanh tiết kiệm tài nguyên thiên nhiên.',
+    source: 'SGK Khoa học 5, tr. 126',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_05',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Biến đổi khí hậu toàn cầu',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Hiện tượng ấm lên toàn cầu của Trái Đất gây ra những thiên tai cực đoan nào?',
+    options: [
+      'Băng hai cực tan chảy, nước biển dâng cao nhấn chìm đồng bằng, bão lũ và hạn hán khốc liệt',
+      'Làm cho băng tuyết bao phủ toàn bộ vùng xích đạo',
+      'Làm cho nước biển ngọt hóa'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Hiệu ứng nhà kính gia tăng làm nhiệt độ Trái Đất tăng kéo theo biến đổi thời tiết khôn lường.',
+    source: 'SGV Khoa học 5, tr. 128',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_06',
+    topicId: 'chud_6',
+    lesson: 'Bài 23: Rừng ngập mặn',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Tại sao các dải rừng ngập mặn (như rừng đước Cần Giờ, Cà Mau) được gọi là “lá chắn xanh” ven biển?',
+    options: [
+      'Hệ rễ đước chằng chịt giúp cản sóng thần, chống sạt lở bờ biển và là nơi nuôi dưỡng ấu trùng tôm cá',
+      'Để ngăn không cho tàu thuyền đánh cá ra khơi',
+      'Vì gỗ đước có màu xanh lá'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Rừng ngập mặn triệt tiêu năng lượng sóng bão, bồi tụ phù sa và bảo vệ cuộc sống cư dân ven biển.',
+    source: 'SGK Khoa học 5, tr. 124',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_07',
+    topicId: 'chud_6',
+    lesson: 'Bài 21: Không khí sạch',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Khí oxy trong khí quyển mà con người và động vật hít thở hàng ngày được tái tạo chủ yếu nhờ quá trình nào?',
+    options: [
+      'Quá trình quang hợp của toàn bộ thảm thực vật cây xanh trên Trái Đất',
+      'Quá trình bốc hơi nước của đại dương',
+      'Quá trình đốt than củi trong sinh hoạt'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Cây xanh hấp thụ CO2 và giải phóng O2 duy trì sự sống cho toàn bộ sinh vật hiếu khí.',
+    source: 'SGK Khoa học 5, tr. 115',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_08',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Năng lượng tái tạo bảo vệ môi trường',
+    type: 'multiple_choice',
+    cognitiveLevel: 'ket_noi',
+    content: 'Chuyển đổi từ xe máy chạy xăng sang xe điện sử dụng điện mặt trời mang lại lợi ích môi trường nào?',
+    options: [
+      'Giảm thiểu lượng khí thải độc hại gây ô nhiễm không khí đô thị và giảm phát thải khí nhà kính',
+      'Làm xe chạy nhanh gấp mười lần',
+      'Khiến đường phố không cần đèn tín hiệu giao thông'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Giao thông xanh không phát thải khói bụi tại chỗ, góp phần làm sạch bầu không khí thành phố.',
+    source: 'SGK Khoa học 5, tr. 127',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_kn_09',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Trách nhiệm công dân',
+    type: 'fill_in_the_blank',
+    cognitiveLevel: 'ket_noi',
+    content: 'Điền từ thích hợp vào câu khẩu hiệu:',
+    blankTemplate: 'Bảo vệ môi trường là {1} và nghĩa vụ của {2} chúng ta.',
+    blankOptions: ['trách nhiệm', 'mỗi người', 'quyền lợi', 'người khác'],
+    blankAnswers: ['trách nhiệm', 'mỗi người'],
+    explanation: 'Mỗi cá nhân đều có trách nhiệm gìn giữ môi trường sống chung trong lành.',
+    source: 'SGK Khoa học 5, tr. 128',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  // Vận dụng
+  {
+    id: 'c6_vd_01',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Phân loại rác tại trường học',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Sau giờ ra chơi ở Trường Tiểu học Lương Thế Vinh, em có một hộp sữa giấy đã uống hết và một vỏ quả chuối. Em sẽ bỏ vào thùng rác nào?',
+    options: [
+      'Hộp sữa bỏ vào thùng rác tái chế, vỏ chuối bỏ vào thùng rác hữu cơ',
+      'Vứt bừa bãi xuống sân trường dưới gốc cây',
+      'Bỏ cả hai vào thùng rác vô cơ khó phân hủy'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Phân loại rác đúng nguồn giúp vỏ chuối ủ thành phân xanh, hộp giấy được đưa đi tái chế.',
+    source: 'SGK Khoa học 5, tr. 126',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_vd_02',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Đi chợ không dùng túi ni lông',
+    type: 'ordering',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi cùng mẹ đi siêu thị hoặc chợ dân sinh, quy trình thực hiện tiêu dùng xanh là:',
+    orderingItems: [
+      'Chủ động chuẩn bị làn nhựa hoặc túi vải dùng nhiều lần mang theo',
+      'Từ chối nhận túi ni lông đựng đồ từ người bán hàng',
+      'Sắp xếp gọn gàng hàng hóa vào giỏ mang về và giặt sạch túi để dùng lần sau'
+    ],
+    correctOrder: [0, 1, 2],
+    explanation: 'Thói quen mang túi riêng giúp giảm thiểu hàng trăm túi ni lông độc hại thải ra bãi rác mỗi tháng.',
+    source: 'SGK Khoa học 5, tr. 127',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_vd_03',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Tiết kiệm nước trong sinh hoạt',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi đánh răng mỗi buổi sáng, hành động nào thể hiện em là học sinh biết tiết kiệm tài nguyên nước?',
+    options: [
+      'Hứng nước vào một chiếc cốc để đánh răng và khóa vòi nước lại trong lúc chải răng',
+      'Mở vòi nước xả tràn trề liên tục từ đầu đến cuối',
+      'Không thèm đánh răng để tiết kiệm nước'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Dùng cốc hứng nước vừa đủ giúp tiết kiệm từ 5 đến 10 lít nước sạch mỗi lần vệ sinh răng miệng.',
+    source: 'SGK Khoa học 5, tr. 125',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_vd_04',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Trồng cây gây rừng',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Nhân dịp Tết trồng cây đầu xuân, lớp em được giao chăm sóc một bồn hoa cây cảnh. Việc làm nào giúp cây phát triển tốt nhất?',
+    options: [
+      'Phân công tưới nước ẩm vừa đủ vào sáng sớm hoặc chiều mát, nhổ cỏ dại và bắt sâu cho cây',
+      'Tưới đẫm nước ngập úng gốc giữa trưa nắng gắt 12 giờ trưa',
+      'Bẻ cành hái hoa để mang về nhà cắm lọ'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tưới nước sáng sớm, làm cỏ xới xáo đất giúp rễ cây hấp thụ dinh dưỡng mà không bị cháy lá do nắng.',
+    source: 'SGK Khoa học 5, tr. 128',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_vd_05',
+    topicId: 'chud_6',
+    lesson: 'Bài 23: Bảo vệ động vật hoang dã',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Khi thấy người lớn buôn bán hoặc nuôi nhốt các loài chim quý hiếm, tê tê hoang dã, em nên làm gì?',
+    options: [
+      'Báo ngay cho thầy cô giáo, bố mẹ hoặc gọi đường dây nóng kiểm lâm để giải cứu động vật',
+      'Mua về làm thú cưng trong phòng ngủ',
+      'Không quan tâm vì đó không phải việc của mình'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Bảo vệ động vật hoang dã là trách nhiệm chung để giữ gìn sự cân bằng sinh thái tự nhiên.',
+    source: 'SGK Khoa học 5, tr. 123',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  },
+  {
+    id: 'c6_vd_06',
+    topicId: 'chud_6',
+    lesson: 'Bài 24: Dự án tái chế đồ dùng học tập',
+    type: 'multiple_choice',
+    cognitiveLevel: 'van_dung',
+    content: 'Em có nhiều chai nhựa nước khoáng đã uống hết. Thay vì vứt vào sọt rác, em có thể sáng tạo làm gì?',
+    options: [
+      'Cắt gọt trang trí thành ống đựng bút xinh xắn hoặc chậu mini trồng hoa treo cửa sổ',
+      'Đốt cháy các chai nhựa gây khói đen mù mịt',
+      'Ném các chai nhựa xuống cống thoát nước trước cổng trường'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'Tái chế rác nhựa thành đồ dùng hữu ích vừa kích thích sáng tạo vừa giảm lượng rác thải ra môi trường.',
+    source: 'SGK Khoa học 5, tr. 127',
+    approved: true,
+    createdAt: '2026-01-10T08:00:00Z'
+  }
+];

@@ -1,0 +1,6 @@
+{
+  "name": "Thông Thái Cùng Thầy Thông - Khoa Học Lớp 5",
+  "description": "Nền tảng kiểm tra trực tuyến và ngân hàng câu hỏi thông minh môn Khoa học lớp 5 - Thầy Dư Quốc Thông, Trường Tiểu học Lương Thế Vinh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
